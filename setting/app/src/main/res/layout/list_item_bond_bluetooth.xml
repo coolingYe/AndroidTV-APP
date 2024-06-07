@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bond_layout"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginRight="6dp"
+    android:background="@drawable/img_wifi_frame_selector">
+
+    <ImageView
+        android:id="@+id/img_headset"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="13dp"
+        android:duplicateParentState="true"
+        android:src="@drawable/img_headset_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:duplicateParentState="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="ZEEWAIN-5G"
+        android:textColor="@drawable/selector_text_bg"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/img_headset"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_lock"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginRight="13dp"
+        android:duplicateParentState="true"
+        android:src="@drawable/bg_arrow_focus_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
+        android:text="已配对"
+        android:textColor="#999999"
+        android:textSize="9sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_lock"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

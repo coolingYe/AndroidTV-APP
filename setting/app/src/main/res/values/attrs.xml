@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IconTextScaleView">
+        <attr name="icon_bg" format="reference" />
+        <attr name="icon_text" format="string"/>
+        <attr name="show_text_focus_only" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScanningConstraintLayout">
+        <attr name="lightImage" format="reference" />
+        <attr name="layoutRadius" format="dimension" />
+    </declare-styleable>
+
+    <attr name="scrollMode" >
+        <enum name="normalScroll" value="0"/>
+        <enum name="followScroll" value="1"/>
+    </attr>
+
+
+    <declare-styleable name="TvRecyclerView">
+        <attr name="scrollMode"/>
+    </declare-styleable>
+
+    <declare-styleable name="a_zhon">
+        <!--每条线的粗细-->
+        <attr name="paintBold" format="dimension" />
+        <!--每条线的长度-->
+        <attr name="lineLength" format="dimension" />
+        <!--线条个数-->
+        <attr name="lines" format="integer" />
+        <!--最大进度-->
+        <attr name="max" format="integer" />
+        <!--当前进度-->
+        <attr name="progress" format="integer" />
+        <!--背景菊花颜色-->
+        <attr name="backgroundColor" format="reference|color" />
+        <!--前景菊花颜色-->
+        <attr name="beforeColor" format="reference|color" />
+        <!--进度文字颜色-->
+        <attr name="textColor" format="reference|color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TimeSwitchView">
+        <attr name="typeMode" format="enum">
+            <enum name="hour" value="0" />
+            <enum name="minute" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

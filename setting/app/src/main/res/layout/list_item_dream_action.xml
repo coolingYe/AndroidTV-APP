@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout android:id="@+id/cl_dream_action"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_marginBottom="7dp"
+    android:background="@drawable/bg_pwd_rectangle_selector"
+    android:focusable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/dream_action_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:duplicateParentState="true"
+        android:textColor="@drawable/selector_text_bg"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/dream_action_radio_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:checked="false"
+        android:buttonTint="#8768ea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>

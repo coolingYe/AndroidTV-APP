@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/head_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/img_head_title"
+        android:layout_width="174dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/img_head_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="45dp"
+        android:focusable="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_user"
+            android:layout_width="68dp"
+            android:layout_height="28dp"
+            android:src="@mipmap/img_head_user"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:text="登录"
+            android:textColor="#AE6A4C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user"
+            app:layout_constraintRight_toRightOf="@+id/img_user"
+            app:layout_constraintTop_toTopOf="@+id/img_user" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_head_wifi"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="20dp"
+        android:focusable="true"
+        android:src="@mipmap/img_head_wifi"
+        app:layout_constraintRight_toLeftOf="@+id/layout_user"
+        app:layout_constraintTop_toTopOf="@+id/layout_user" />
+
+    <ImageView
+        android:id="@+id/img_head_set"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="20dp"
+        android:focusable="true"
+        android:src="@mipmap/img_head_set"
+        app:layout_constraintRight_toLeftOf="@+id/img_head_wifi"
+        app:layout_constraintTop_toTopOf="@+id/img_head_wifi" />
+
+    <ImageView
+        android:id="@+id/img_head_search"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="20dp"
+        android:focusable="true"
+        android:src="@mipmap/img_head_search"
+        app:layout_constraintRight_toLeftOf="@+id/img_head_set"
+        app:layout_constraintTop_toTopOf="@+id/img_head_set" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

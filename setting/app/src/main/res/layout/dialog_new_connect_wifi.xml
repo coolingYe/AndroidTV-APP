@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="593dp"
+    android:layout_height="320dp"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/head_root"
+        android:layout_width="593dp"
+        android:layout_height="70dp"
+        android:background="@drawable/shape_rectangle_dialog_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/wifi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ZEEWAIN-5G"
+            android:textColor="@color/src_c33"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="26dp"
+            android:src="@mipmap/img_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="593dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle_dialog_grey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_root">
+
+        <EditText
+            android:id="@+id/input_pwd"
+            android:layout_width="470dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="53dp"
+            android:background="@drawable/bg_pwd_rectangle_selector_ae8"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:paddingLeft="16dp"
+            android:text=""
+            android:textColor="#999999"
+            android:textSize="21sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/connect_wifi"
+            android:layout_width="101dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="181dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="21dp"
+            android:background="@drawable/bg_connect_wifi_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="连接"
+            android:textColor="@drawable/selector_text_bg"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/show_pwd_tv" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="101dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="29dp"
+            android:background="@drawable/bg_connect_wifi_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/selector_text_bg"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/connect_wifi"
+            app:layout_constraintTop_toTopOf="@+id/connect_wifi" />
+
+        <ImageView
+            android:id="@+id/show_pwd"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:src="@drawable/bg_pwd_selector"
+            app:layout_constraintLeft_toLeftOf="@+id/input_pwd"
+            app:layout_constraintTop_toBottomOf="@+id/input_pwd" />
+
+        <TextView
+            android:id="@+id/show_pwd_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:text="显示密码"
+            android:textColor="#999999"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/show_pwd"
+            app:layout_constraintLeft_toRightOf="@+id/show_pwd"
+            app:layout_constraintTop_toTopOf="@+id/show_pwd" />
+
+        <!--    <ImageView
+
+                android:id="@+id/img_back"
+                app:layout_constraintTop_toTopOf="@+id/wifi_name"
+                app:layout_constraintLeft_toLeftOf="@+id/input_pwd"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/img_back"
+
+                />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.sunniwell.aar.focuscontrol.layout.FocusControlLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="@drawable/shape_rectangle_white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="关于设备"
+            android:textColor="#000000"
+            android:textSize="21sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+    <net.sunniwell.aar.focuscontrol.layout.FocusControlLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/device_name_set"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="设备名称"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_marginRight="13dp"
+                android:duplicateParentState="true"
+                android:src="@drawable/bg_arrow_focus_selector"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:duplicateParentState="true"
+                android:text="AI互动屏盒子"
+                android:textColor="@drawable/selector_text_bg_c99"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/arrow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginRight="13dp" />
+
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/device_model"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="设备型号"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/device_model_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:duplicateParentState="true"
+                android:text="AIHDPZ1 Pro"
+                android:textColor="@drawable/selector_text_bg_c99"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/identify_code"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="型号识别码"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.zee.setting.views.MarqueeText
+                android:id="@+id/identify_code_name"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="ZEEProwain521HD88CD_ZZEEProwain521"
+                android:textColor="@color/src_c99"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/device_number"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="设备序列号"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/device_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:duplicateParentState="true"
+                android:text=""
+                android:textColor="@drawable/selector_text_bg_c99"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/device_mac"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="设备MAC"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/device_mac_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:duplicateParentState="true"
+                android:text="00：00：00：00：00：00"
+                android:textColor="@drawable/selector_text_bg_c99"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/ip_address"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="IP地址"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ip_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:duplicateParentState="true"
+                android:text=""
+                android:textColor="@drawable/selector_text_bg_c99"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/wireless_mac"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="无线MAC"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/wireless_mac_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:duplicateParentState="true"
+                android:text="00：00：00：00：00：00"
+                android:textColor="@drawable/selector_text_bg_c99"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/android_version"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="安卓版本"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/android_version_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:duplicateParentState="true"
+                android:text="ZEEProwain521ZE"
+                android:textColor="@drawable/selector_text_bg_c99"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/privacy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="隐私协议"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_marginRight="13dp"
+                android:src="@drawable/bg_arrow_focus_selector"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+        <net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout
+            android:id="@+id/user_layout"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_network_focus_selector"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:duplicateParentState="true"
+                android:text="用户协议"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_marginRight="13dp"
+                android:src="@drawable/bg_arrow_focus_selector"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </net.sunniwell.aar.focuscontrol.layout.FocusControlConstraintLayout>
+
+    </net.sunniwell.aar.focuscontrol.layout.FocusControlLinearLayout>
+
+</net.sunniwell.aar.focuscontrol.layout.FocusControlLinearLayout>

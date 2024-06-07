@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/timer_with"
+    android:layout_height="@dimen/timer_height">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/head_root"
+        android:layout_width="@dimen/timer_with"
+        android:layout_height="70dp"
+        android:background="@drawable/shape_rectangle_dialog_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_timer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/timer_shutdown"
+            android:textColor="@color/src_c33"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="26dp"
+            android:src="@mipmap/img_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/center_root"
+        android:layout_width="@dimen/timer_with"
+        android:layout_height="@dimen/timer_center"
+        android:background="#E3E3E3"
+        android:paddingTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/timer_footer"
+        app:layout_constraintTop_toBottomOf="@+id/head_root">
+
+        <TextView
+            android:id="@+id/tv_shutdown_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:text="@string/shutdown_desc"
+            android:textColor="#956CE6"
+            android:textSize="13sp"
+            app:drawableStartCompat="@mipmap/ic_desc_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="114dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/start_time"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shutdown_desc" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="114dp"
+            android:drawablePadding="5dp"
+            android:text="@string/end_time"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_start_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_start_time" />
+
+        <com.zee.setting.views.pickerview.ComTimeView
+            android:id="@+id/time_view"
+            android:layout_width="@dimen/timer_with"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_start_time" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/banner_bottom_bg"
+        android:layout_width="@dimen/timer_with"
+        android:layout_height="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/gradient_banner_text"
+        app:layout_constraintBottom_toTopOf="@+id/timer_footer" />
+
+    <LinearLayout
+        android:id="@+id/timer_footer"
+        android:layout_width="@dimen/timer_with"
+        android:layout_height="74dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/shape_rectangle_dialog_grey"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_date_apply"
+            android:layout_width="101dp"
+            android:layout_height="44dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_pwd_rectangle_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/apply"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_date_cancel"
+            android:layout_width="101dp"
+            android:layout_height="44dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_pwd_rectangle_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_date_delete"
+            android:layout_width="101dp"
+            android:layout_height="44dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_pwd_rectangle_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

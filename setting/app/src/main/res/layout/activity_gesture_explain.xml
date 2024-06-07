@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/src_f0f">
+
+    <View
+        android:id="@+id/gesture_back"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/ic_back"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="手势说明"
+        android:textColor="@color/src_c33"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="99dp"
+        android:layout_marginRight="99dp"
+        android:gravity="center"
+        android:text="摄像头打开后，自动激活手势控制，激活后使用其他手势触发相对指令，\n
+以手心朝向为正方向挥动手掌（左右手皆如此），以此实现遥控相应的上下左右操作命令。"
+        android:textColor="@color/src_c33"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="99dp"
+        android:layout_marginRight="99dp"
+        android:gravity="center"
+        android:text="（建议在摄像头2米范围内进行手势控制，体验更好哦~）"
+        android:textColor="@color/src_c99"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintTop_toBottomOf="@+id/prompt">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/raise_hand_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/raise_hand_left"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:src="@mipmap/ic_raise_hand_left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/raise_hand_right"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_raise_hand_right"
+                app:layout_constraintLeft_toRightOf="@+id/raise_hand_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="举手激活"
+                android:textColor="@color/src_c33"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/raise_hand_left" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/space_line"
+            android:layout_width="1dp"
+            android:layout_height="261dp"
+            android:layout_marginLeft="70dp"
+            android:background="@mipmap/ic_vertical_line"
+            android:layerType="software"
+            app:layout_constraintLeft_toRightOf="@+id/raise_hand_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--   <com.zee.setting.views.ImaginaryLineView
+               android:id="@+id/space_line"
+               android:layout_width="1dp"
+               android:layout_height="261dp"
+               android:layout_marginLeft="70dp"
+               android:layerType="software"
+               app:layout_constraintLeft_toRightOf="@+id/raise_hand_layout"
+               app:layout_constraintTop_toTopOf="parent"
+
+               />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="72dp"
+            app:layout_constraintLeft_toRightOf="@+id/space_line"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ok_left"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:src="@mipmap/ic_ok_left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/raise_ok_right"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_ok_right"
+                app:layout_constraintLeft_toRightOf="@+id/ok_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="OK确认键"
+                android:textColor="@color/src_c33"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ok_left" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="93dp"
+            app:layout_constraintLeft_toRightOf="@+id/layout_ok"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/up_left"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:src="@mipmap/ic_up_left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/up_right"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_up_right"
+                app:layout_constraintLeft_toRightOf="@+id/up_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="上挥上键"
+                android:textColor="@color/src_c33"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/up_left" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="93dp"
+            app:layout_constraintLeft_toRightOf="@+id/layout_up"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/down_left"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:src="@mipmap/ic_down_left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/down_right"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_down_right"
+                app:layout_constraintLeft_toRightOf="@+id/down_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="下挥下键"
+                android:textColor="@color/src_c33"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/down_left" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_fist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toRightOf="@+id/space_line"
+            app:layout_constraintTop_toBottomOf="@+id/layout_ok">
+
+            <ImageView
+                android:id="@+id/fist_left"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:src="@mipmap/ic_fist_left_new"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/fist_right"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_fist_right_new"
+                app:layout_constraintLeft_toRightOf="@+id/fist_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="握拳返回键"
+                android:textColor="@color/src_c33"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fist_left" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_left_swing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="93dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toRightOf="@+id/layout_fist"
+            app:layout_constraintTop_toBottomOf="@+id/layout_ok">
+
+            <ImageView
+                android:id="@+id/left_hand_to_left"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:src="@mipmap/ic_left_hand_to_left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/right_hand_to_left"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_right_hand_to_left"
+                app:layout_constraintLeft_toRightOf="@+id/left_hand_to_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="左挥左键"
+                android:textColor="@color/src_c33"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/left_hand_to_left" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_right_swing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="93dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toRightOf="@+id/layout_left_swing"
+            app:layout_constraintTop_toBottomOf="@+id/layout_ok">
+
+            <ImageView
+                android:id="@+id/left_hand_to_right"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:src="@mipmap/ic_left_hand_to_right"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/right_hand_to_right"
+                android:layout_width="43dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_right_hand_to_right"
+                app:layout_constraintLeft_toRightOf="@+id/left_hand_to_right"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="右挥右键"
+                android:textColor="@color/src_c33"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/left_hand_to_right" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<ProgressBar
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:indeterminateDuration="2"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/anim_drawable_bg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>-->
+
+    <FrameLayout
+        android:id="@+id/prompt_layout"
+        android:layout_width="324dp"
+        android:layout_height="324dp"
+        android:layout_marginLeft="358dp"
+        android:layout_marginTop="147dp"
+        android:background="@mipmap/ic_load_back"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.zee.setting.views.LoadingView
+            android:id="@+id/load"
+            android:layout_width="324dp"
+            android:layout_height="324dp"
+            android:visibility="visible"
+            app:beforeColor="#ffffff"
+            app:lineLength="15dp"
+            app:max="100"
+            app:paintBold="3dp"
+            app:progress="0" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_prompt"
+                android:layout_width="106dp"
+                android:layout_height="175dp"
+                android:layout_marginTop="55dp"
+                android:src="@mipmap/ic_raise_hand_grey" />
+
+            <TextView
+                android:id="@+id/tv_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="举手激活"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

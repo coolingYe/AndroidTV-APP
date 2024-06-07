@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="440dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="593dp"
+        android:layout_height="70dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="系统版本"
+        android:textColor="@color/src_c33"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/update_layout"
+        android:layout_width="593dp"
+        android:layout_height="340dp"
+        android:layout_marginBottom="0dp"
+        android:background="#E8E8E8"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/firmware"
+            android:layout_width="564dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_wifi_detail_selector"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/firmware_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:duplicateParentState="true"
+                android:text="固件版本升级"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/firmware_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:duplicateParentState="true"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:text="1.1.1.0（已是最新版本）"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/desk"
+            android:layout_width="564dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_wifi_detail_selector"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/desk_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:duplicateParentState="true"
+                android:text="桌面版本升级"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/desk_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:duplicateParentState="true"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:text="1.1.0.1（暂无版本更新）"
+                android:textColor="@drawable/selector_text_bg"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirm_cancel_layout"
+        android:layout_width="593dp"
+        android:layout_height="74dp"
+        android:background="#E8E8E8"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="101dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="184dp"
+            android:background="@drawable/bg_button_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@drawable/selector_text_bg"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="101dp"
+            android:layout_height="44dp"
+            android:layout_marginRight="176dp"
+            android:background="@drawable/bg_button_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/selector_text_bg"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

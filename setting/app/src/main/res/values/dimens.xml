@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="timer_with">593dp</dimen>
+    <dimen name="timer_height">410dp</dimen>
+    <dimen name="timer_center">266dp</dimen>
+</resources>

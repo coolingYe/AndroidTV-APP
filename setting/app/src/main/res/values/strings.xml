@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">setting</string>
+    <string name="apply">确认</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="colon">:</string>
+    <string name="with">至</string>
+    <string name="shutdown_desc">此功能须使用遥控器操作</string>
+    <string name="timer_shutdown">定时开关机</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="edit">编辑</string>
+    <string name="agreement_1">隐私协议</string>
+    <string name="agreement_2">用户协议</string>
+    <string name="phone_camera">手机摄像头</string>
+    <string name="phone_camera_guide">手机摄像头-连接指引</string>
+    <string name="guide_desc_1">1.使用安卓手机打开相机/浏览器扫一扫,识别二维码,下载紫星助手</string>
+    <string name="guide_desc_2">2.打开紫星助手APP,点击“扫码添加设备”,绑定当前设备</string>
+    <string name="guide_desc_3">3.绑定设备后,在紫星助手APP点击一键直连,连接成功即可体验应用</string>
+    <string name="guide_desc_4">4.设备连接成功后， 在APP唤醒全屏摄像头，摄像机启用成功后，即可体验应用。</string>
+    <string name="guide_tip_1">**微信下载时被拦截，请使用相机/浏览器扫描下载</string>
+    <string name="guide_tip_2">**如您已加过当前SN设备，请直接点击【下一步】</string>
+</resources>
