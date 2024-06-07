@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_need_login_base"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_need_login_base"
+        android:layout_width="260dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@mipmap/img_need_login" />
+
+    <TextView
+        android:id="@+id/tv_need_login_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="登录后可查看更多内容"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_need_login_base"
+        android:layout_width="260dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_margin_5_1"
+        android:text="登录"
+        android:textColor="@color/color_selector_2a2c41_ffffff"
+        android:textSize="20sp" />
+</LinearLayout>

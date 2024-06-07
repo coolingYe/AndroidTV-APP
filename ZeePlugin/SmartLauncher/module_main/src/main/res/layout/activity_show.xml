@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_c18_ffffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_show_old"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_show_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#333"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scl_confirm"
+            android:layout_width="106dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            android:background="@drawable/selector_corner42_ff956ce6_b2956ce6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_show_tip">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/color_selector_ffffff_e2e2e2"
+                android:textSize="16sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_show_new"
+        android:layout_width="482dp"
+        android:layout_height="331dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/tv_timer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="摄像头异常"
+        android:textColor="#333333"
+        android:textSize="26sp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cam_exception_tips_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="60dp"
+        android:textColor="@android:color/black"
+        android:text="手机摄像头连接中断"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timer_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_cam_exception_tips_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:text="请重新连接摄像头，确保正常体验"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cam_exception_tips_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_next"
+            android:layout_width="171dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="27dp"
+            app:cardElevation="0dp"
+            app:rippleColor="#30FFFFFF"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/tv_camera_exception"
+                android:layout_width="165dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_rectange_gradient_6a6_ae8_c22"
+                android:gravity="center"
+                android:text="前往连接指引"
+                android:textColor="@android:color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:id="@+id/view_cut"
+            android:layout_width="52dp"
+            android:layout_height="1dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_cancel"
+            android:layout_width="171dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="27dp"
+            app:rippleColor="#30FFFFFF"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_rectange_gradient_2ff_5ff_c22"
+                android:gravity="center"
+                android:text="好的，知道了"
+                android:textColor="@android:color/white" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

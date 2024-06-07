@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="265dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_plugin_item"
+        android:layout_width="292dp"
+        android:layout_height="213dp"
+        android:contentDescription="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"/>
+
+    <ImageView
+        android:id="@+id/img_plugin_item_loading"
+        android:layout_width="300dp"
+        android:layout_height="221dp"
+        android:contentDescription="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/plugin_loading_anim"
+        />
+
+    <ImageView
+        android:id="@+id/img_gesture_tip"
+        android:layout_width="129dp"
+        android:layout_height="38dp"
+        android:contentDescription="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

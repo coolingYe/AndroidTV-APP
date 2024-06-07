@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <color name="src_c1">#2C1D4E</color>
+    <color name="src_c2">#1D2343</color>
+    <color name="src_c3">#FFFFFF</color>
+    <color name="src_c4">#969696</color>
+    <color name="src_c5">#402E6A</color>
+    <color name="src_c6">#232148</color>
+    <color name="src_c7">#C14BFF</color>
+    <color name="src_c8">#5C8FFF</color>
+    <color name="src_c9">#4DE3E3E4</color>
+    <color name="src_c10">#4D747579</color>
+    <color name="src_c11">#707070</color>
+    <color name="src_c12">#898989</color>
+    <color name="src_c13">#E3E3E4</color>
+    <color name="src_c14">#747579</color>
+    <color name="src_c15">#575757</color>
+    <color name="src_c16">#898989</color>
+    <color name="src_c17">#292929</color>
+    <color name="white_alpha_50">#7fffffff</color>
+    <color name="white_alpha_40">#66ffffff</color>
+    <color name="white_alpha_10">#1affffff</color>
+    <color name="white_alpha_20">#32ffffff</color>
+    <color name="white_alpha_30">#4Dffffff</color>
+    <color name="white_alpha_70">#B3ffffff</color>
+
+    <color name="card_stroke_focused">#FFFFFF</color>
+</resources>

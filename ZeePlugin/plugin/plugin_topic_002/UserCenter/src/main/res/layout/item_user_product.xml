@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_item_user_product"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/src_dp_6"
+    android:layout_marginTop="@dimen/src_dp_6"
+    android:layout_marginBottom="@dimen/src_dp_6"
+    android:background="@drawable/selector_c7_frame_ffffff_0"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="118dp"
+        android:layout_height="89dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:rippleColor="#30FFFFFF">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="112dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0px"
+            app:cardPreventCornerOverlap="false">
+
+            <ImageView
+                android:id="@+id/iv_item_user_product_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/iv_item_user_product_del_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@mipmap/ic_user_product_del_switch_selected"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_item_user_product_del"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"
+                android:paddingStart="44dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="44dp"
+                android:paddingBottom="17dp"
+                android:src="@mipmap/icon_delete"
+                android:visibility="invisible" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_item_user_product_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:textColor="#333333"
+            android:textSize="9sp" />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

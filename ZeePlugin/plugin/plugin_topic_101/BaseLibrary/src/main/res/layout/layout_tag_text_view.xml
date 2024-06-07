@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/tv_tag_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="48dp"
+    android:minHeight="18dp"
+    android:background="@drawable/shape_c2_4dffffff"
+    android:gravity="center"
+    android:textColor="@color/color999999"
+    android:textSize="9sp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:focusable="false"
+    android:fontFamily="@font/font_demibold"
+    tools:text="XXX"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" />

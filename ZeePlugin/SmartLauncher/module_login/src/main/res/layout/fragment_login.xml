@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_login_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="45dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:layout_width="332dp"
+        android:layout_height="384dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="31dp"
+        android:src="@mipmap/img_login_logo"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:id="@+id/ll_login_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="424dp">
+
+        <TextView
+            android:id="@+id/txt_login_title"
+            style="@style/GuideRightPanelTitle"
+            android:layout_marginStart="0dp"
+            android:text="欢迎使用人机交互智能终端" />
+
+        <LinearLayout
+            android:id="@+id/ll_login_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingEnd="5dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_login_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusLeft="@+id/card_login_account"
+                android:clickable="true"
+                android:focusable="true"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:rippleColor="@color/rippleColor"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                >
+
+                <TextView
+                    android:id="@+id/txt_login_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center"
+                    android:text="账号登录"
+                    android:textColor="#333"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view_login_account_line"
+                    android:layout_width="13dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/shape_c2_ff7b22df"
+                    android:layout_gravity="center_horizontal|bottom"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_login_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nextFocusRight="@+id/card_login_phone"
+                android:layout_marginStart="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:rippleColor="@color/rippleColor"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/txt_login_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center"
+                    android:text="短信登录"
+                    android:textColor="#333"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view_login_phone_line"
+                    android:layout_width="13dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/shape_c2_ff7b22df"
+                    android:layout_gravity="center_horizontal|bottom"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_login_account_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_login_account"
+                    style="@style/GuideEditStyle"
+                    android:maxLength="32"
+                    android:layout_marginTop="12dp"
+                    android:hint="请输入您的账号"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_input_login_password_layout"
+                    style="@style/LoginEditItemLayoutStyle"
+                    android:layout_marginTop="23dp">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edit_login_password"
+                        style="@style/GuideEditStyle"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:nextFocusRight="@id/card_checkbox_login_password"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:hint="请输入您的密码"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_checkbox_login_password"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                        android:nextFocusUp="@id/edit_login_password"
+                        android:nextFocusDown="@id/edit_login_password"
+                        android:nextFocusLeft="@id/edit_login_password"
+                        android:nextFocusRight="@id/edit_login_password"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:layout_constraintTop_toTopOf="@+id/edit_login_password"
+                        app:layout_constraintBottom_toBottomOf="@+id/edit_login_password"
+                        app:layout_constraintRight_toRightOf="@+id/edit_login_password"
+                        android:layout_marginEnd="14dp"
+                        app:rippleColor="@color/rippleColor"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_login_password"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:button="@null"
+                            android:background="@drawable/selector_password_edit" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_input_login_password_again_layout"
+                    style="@style/LoginEditItemLayoutStyle">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edit_login_password_again"
+                        style="@style/GuideEditStyle"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:nextFocusRight="@id/card_checkbox_login_password"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:hint="请确认您的密码"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_checkbox_login_password_again"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                        android:nextFocusUp="@id/edit_login_password_again"
+                        android:nextFocusDown="@id/edit_login_password_again"
+                        android:nextFocusLeft="@id/edit_login_password_again"
+                        android:nextFocusRight="@id/edit_login_password_again"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:layout_constraintTop_toTopOf="@+id/edit_login_password_again"
+                        app:layout_constraintBottom_toBottomOf="@+id/edit_login_password_again"
+                        app:layout_constraintRight_toRightOf="@+id/edit_login_password_again"
+                        android:layout_marginEnd="14dp"
+                        app:rippleColor="@color/rippleColor"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_login_password_again"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:button="@null"
+                            android:background="@drawable/selector_password_edit" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_login_img_code_layout"
+                    style="@style/LoginEditItemLayoutStyle"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edit_login_img_code"
+                        style="@style/GuideEditStyle"
+                        android:layout_width="191dp"
+                        android:nextFocusRight="@id/card_login_img_code_refresh"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:maxLength="16"
+                        android:hint="请输入验证码" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_login_img_code"
+                        android:layout_width="106dp"
+                        android:layout_height="39dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/edit_login_img_code"
+                        app:layout_constraintBottom_toBottomOf="@+id/edit_login_img_code"
+                        app:cardCornerRadius="5dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardElevation="0px"
+                        app:cardBackgroundColor="#FFFFFFFF">
+
+                        <ImageView
+                            android:id="@+id/img_login_img_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:contentDescription="@null" />
+
+                        <ImageView
+                            android:id="@+id/img_login_refresh"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/icon_refresh"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_login_img_code_refresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:nextFocusUp="@id/edit_login_img_code"
+                        android:nextFocusLeft="@id/edit_login_img_code"
+                        android:nextFocusRight="@id/card_login_img_code_refresh"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                        app:layout_constraintLeft_toLeftOf="@+id/card_login_img_code"
+                        app:layout_constraintTop_toBottomOf="@+id/card_login_img_code"
+                        app:rippleColor="@color/rippleColor"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@+id/txt_login_img_code_refresh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="看不清换一张"
+                            android:textColor="#956CE6"
+                            android:textSize="9dp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_phone_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_phone_num"
+                    style="@style/GuideEditStyle"
+                    android:maxLength="32"
+                    android:layout_marginTop="12dp"
+                    android:hint="请输入您的手机号"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_sms_img_code_layout"
+                    style="@style/LoginEditItemLayoutStyle"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_marginTop="23dp">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edit_sms_img_code"
+                        style="@style/GuideEditStyle"
+                        android:layout_width="191dp"
+                        android:nextFocusRight="@id/card_sms_img_code_refresh"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:maxLength="16"
+                        android:hint="请输入验证码" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_sms_img_code"
+                        android:layout_width="106dp"
+                        android:layout_height="39dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/edit_sms_img_code"
+                        app:layout_constraintBottom_toBottomOf="@+id/edit_sms_img_code"
+                        app:cardCornerRadius="5dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardElevation="0px"
+                        app:cardBackgroundColor="#FFFFFFFF">
+
+                        <ImageView
+                            android:id="@+id/img_sms_img_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:contentDescription="@null" />
+
+                        <ImageView
+                            android:id="@+id/img_sms_refresh"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/icon_refresh"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_sms_img_code_refresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:nextFocusUp="@id/edit_sms_img_code"
+                        android:nextFocusLeft="@id/edit_sms_img_code"
+                        android:nextFocusRight="@id/card_sms_img_code_refresh"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                        app:layout_constraintLeft_toLeftOf="@+id/card_sms_img_code"
+                        app:layout_constraintTop_toBottomOf="@+id/card_sms_img_code"
+                        app:rippleColor="@color/rippleColor"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@+id/txt_sms_img_code_refresh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="看不清换一张"
+                            android:textColor="#956CE6"
+                            android:textSize="9dp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_input_sms_code_layout"
+                    style="@style/LoginEditItemLayoutStyle">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edit_phone_sms_code"
+                        style="@style/GuideEditStyle"
+                        android:maxLength="6"
+                        android:nextFocusRight="@id/card_checkbox_login_password"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:hint="请输入短信验证码"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_phone_sms_code_get"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                        android:nextFocusUp="@id/card_sms_img_code_refresh"
+                        android:nextFocusDown="@id/edit_phone_sms_code"
+                        android:nextFocusLeft="@id/edit_phone_sms_code"
+                        android:nextFocusRight="@id/edit_phone_sms_code"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:layout_constraintTop_toTopOf="@+id/edit_phone_sms_code"
+                        app:layout_constraintBottom_toBottomOf="@+id/edit_phone_sms_code"
+                        app:layout_constraintRight_toRightOf="@+id/edit_phone_sms_code"
+                        android:layout_marginEnd="14dp"
+                        app:rippleColor="@color/rippleColor"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@+id/txt_sms_code_get"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:textSize="14sp"
+                            android:textColor="#FF956CE6"
+                            android:text="获取验证码"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <include layout="@layout/layout_agreement_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_login"
+        android:layout_width="322dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="421dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_login_context"
+        app:rippleColor="@color/rippleColor"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:id="@+id/txt_login"
+            android:layout_width="316dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/gradient_h_c5_0800f8_8541ce"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_exist_account_activate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="2dp"
+        android:nextFocusLeft="@id/card_exist_account_activate"
+        android:nextFocusRight="@id/card_exist_account_activate"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+        app:layout_constraintRight_toRightOf="@+id/card_login"
+        app:layout_constraintTop_toBottomOf="@+id/card_login"
+        app:rippleColor="@color/rippleColor"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:id="@+id/txt_exist_account_activate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="已有账号激活"
+            android:textColor="#956CE6"
+            android:textSize="9dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/networkErrView_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="400dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

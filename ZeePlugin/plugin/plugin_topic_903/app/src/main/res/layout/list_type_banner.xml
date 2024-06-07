@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_banner_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="6dp"
+    android:focusable="true"
+    android:theme="@style/notFocusedBackground">
+
+    <com.zee.launcher.home.widgets.BannerConstraintLayout
+        android:id="@+id/cl_banner_child"
+        android:layout_width="870dp"
+        android:layout_height="245dp"
+        android:padding="@dimen/src_dp_3"
+        android:focusable="false"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.zee.launcher.home.widgets.banner.Banner
+            android:id="@+id/banner_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:rippleColor="#30FFFFFF" />
+
+        <TextView
+            android:id="@+id/banner_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(敬请期待)"
+            android:textColor="#B5685E"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/src_dp_16"
+            android:layout_marginEnd="@dimen/src_dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/img_banner_shadow_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_banner_index"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_v_0_7f0_0"
+            android:focusable="false"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.zee.launcher.home.widgets.BannerConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

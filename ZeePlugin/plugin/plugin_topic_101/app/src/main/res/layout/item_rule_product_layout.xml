@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_home_rule_product_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:theme="@style/notFocusedBackground">
+
+    <ImageView
+        android:id="@+id/iv_home_rule_product"
+        android:layout_width="240dp"
+        android:layout_height="134dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@+id/view_mask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/view_mask"/>
+
+    <View
+        android:id="@+id/view_mask"
+        android:layout_width="250dp"
+        android:layout_height="145dp"
+        android:background="@mipmap/ic_home_product_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_home_rule_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_home_rule_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/font_demibold"
+        android:layout_marginTop="19dp"
+        android:textSize="18sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

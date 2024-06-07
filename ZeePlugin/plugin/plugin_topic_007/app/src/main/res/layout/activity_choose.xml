@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="576dp"
+    android:layout_height="390dp"
+    android:background="@drawable/gradient_ffffff_e9f4ff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-black"
+        android:text="交互模式选择"
+        android:textColor="#333333"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_cancel"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="27dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#30FFFFFF">
+
+        <ImageView
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:padding="6dp"
+            android:src="@mipmap/icon_cancel"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="1dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/ll_model1"
+        android:layout_width="209dp"
+        android:layout_height="273dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/selector_choose_1"
+        android:elevation="1dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="遥控器模式"
+            android:textColor="#387EFF"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:layout_width="129dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="45dp"
+            android:src="@mipmap/icon_remote_control" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="指尖操作，一触即达"
+            android:textColor="#387EFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_model2"
+        android:layout_width="209dp"
+        android:layout_height="273dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/selector_choose_2"
+        android:elevation="1dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="AI交互模式"
+            android:textColor="#754AFF"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:layout_width="97dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="45dp"
+            android:src="@mipmap/icon_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="沉浸体验AI识别高科技"
+            android:textColor="#387EFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

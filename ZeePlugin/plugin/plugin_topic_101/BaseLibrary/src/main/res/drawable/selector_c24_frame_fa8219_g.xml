@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/gradient_h_c24_frame_f8b704_fb7020" android:state_focused="true" />
+    <item android:drawable="@drawable/gradient_h_c24_frame_f8b704_fb7020" android:state_selected="true" />
+    <item android:drawable="@drawable/gradient_h_c24_f8b704_fb7020"/>
+</selector>

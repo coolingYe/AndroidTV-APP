@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.ZeeBase" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="notFocusedBackground" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:selectableItemBackground">@android:color/transparent</item>
+    </style>
+</resources>

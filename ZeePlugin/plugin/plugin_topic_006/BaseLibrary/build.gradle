@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        flavorDimensions "root"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        single {
+            dimension "root"
+        }
+
+        plugin {
+            dimension "root"
+        }
+    }
+}
+
+dependencies {
+
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.material
+    api rootProject.ext.dependencies.constraintlayout
+    api rootProject.ext.dependencies.junit
+    api rootProject.ext.dependencies.junitExt
+    api rootProject.ext.dependencies.espresso
+
+    api rootProject.ext.dependencies.fastjson
+
+    api rootProject.ext.dependencies.rxjava2
+    api rootProject.ext.dependencies.rxjava2Android
+
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.converterGson
+    api rootProject.ext.dependencies.adapterRxjava2
+    api rootProject.ext.dependencies.okhttp3
+    api rootProject.ext.dependencies.loggingInterceptor
+    api rootProject.ext.dependencies.websocket
+
+    api rootProject.ext.dependencies.glide
+    annotationProcessor rootProject.ext.dependencies.glideCompiler
+    api rootProject.ext.dependencies.glideOkhttp3Integration
+
+    //缓存 DiskLruCache
+    api rootProject.ext.dependencies.disklrucache
+
+    implementation project(path: ':HostLib')
+
+    debugApi rootProject.ext.dependencies.leakcanary
+}

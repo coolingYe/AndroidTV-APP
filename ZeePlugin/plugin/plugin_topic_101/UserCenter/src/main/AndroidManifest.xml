@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zwn.user">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name=".ui.login.QrcodeLoginActivity"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="false"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ui.UserCenterActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+    </application>
+
+</manifest>

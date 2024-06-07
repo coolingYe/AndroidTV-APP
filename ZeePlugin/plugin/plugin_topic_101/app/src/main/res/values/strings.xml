@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">plugin_home</string>
+    <string name="resume">简介:</string>
+    <string name="current_version">当前版本</string>
+    <string name="the_developer">开发商</string>
+    <string name="the_operator">运营商</string>
+    <string name="activity_description">活动介绍</string>
+    <string name="activity_rules">活动规则</string>
+    <string name="leaderboard">排行榜</string>
+    <string name="leaderboard_lose">未上榜</string>
+    <string name="event_description"></string>
+    <string name="event_rule"></string>
+</resources>

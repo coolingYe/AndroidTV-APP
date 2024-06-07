@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="clock_color">#FFFFFF</color>
+    <color name="list_text">#FFFE9D</color>
+    <color name="product_text">#FFFFFF</color>
+    <color name="detail_download_text_color">#607D28</color>
+    <color name="user_center_logout_text_bg">#83A04C</color>
+    <color name="user_center_logout_text">#FFFFFF</color>
+</resources>

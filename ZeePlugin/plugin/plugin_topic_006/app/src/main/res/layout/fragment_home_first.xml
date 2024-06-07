@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <com.zee.launcher.home.widgets.VerticalRecyclerView
+        android:id="@+id/recycler_view_home_classic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        android:paddingStart="33dp"
+        android:paddingEnd="33dp"
+        android:paddingTop="6dp"
+        android:visibility="invisible"
+        tools:ignore="RtlSymmetry" />
+
+    <com.zeewain.base.widgets.CustomerFlowLayout
+        android:id="@+id/customer_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="41dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view_home_classic"
+        app:layout_constraintStart_toStartOf="@+id/recycler_view_home_classic"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_view_home_classic"
+        app:textPaddingStart="11dp" />
+
+    <com.zeewain.base.widgets.LoadingView
+        android:id="@+id/loadingView_home_classic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone" />
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/networkErrView_home_classic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:focusable="false"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="62dp"
+            app:srcCompat="@mipmap/img_no_data_download" />
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/exception_case_color"
+            android:includeFontPadding="false"
+            android:textSize="13sp"
+            android:text="没有数据"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_user_top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:focusable="true"
+        android:background="@drawable/selector_top_bar_wifi"
+        android:theme="@style/notFocusedBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_user_top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/shape_top_bar_frame"
+            android:duplicateParentState="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="16"
+            android:paddingStart="33dp"
+            android:paddingEnd="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_user_top_bar"
+            android:layout_width="31dp"
+            android:layout_height="26dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_top_bar_user_logo"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_top_bar_back"
+        android:layout_width="73dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="45dp"
+        android:background="@drawable/selector_top_bar_frame"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:paddingStart="@dimen/src_dp_10"
+        android:paddingEnd="@dimen/src_dp_10"
+        android:scaleType="fitXY"
+        android:text="@string/back"
+        android:includeFontPadding="false"
+        android:textColor="@drawable/selector_top_bar_color"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/selector_top_bar_back_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_top_bar_offset"
+        android:layout_width="34dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_top_bar_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="AR元宇宙"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/view_top_bar_offset"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextClock
+        android:id="@+id/tp_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:format12Hour="HH:mm"
+        android:format24Hour="HH:mm"
+        android:textColor="@android:color/white"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/txt_top_bar_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_wifi_top_bar"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/selector_top_bar_wifi"
+        android:src="@mipmap/top_bar_wifi"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tp_time"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_settings_top_bar"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/selector_top_bar_settings"
+        android:src="@mipmap/top_bar_settings"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_wifi_top_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fl_top_bar_center"
+        android:layout_width="360dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</merge>

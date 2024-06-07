@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="xStartColor" format="color" />
+    <attr name="xEndColor" format="color" />
+    <attr name="xCornersRadius" format="dimension" />
+
+    <attr name="xDrawMode" format="enum">
+        <!-- horizontalLine 横线 - 绘制像横线一样从左到右 -->
+        <enum name="horizontalLine" value="0" />
+        <!-- verticalLine 竖线 | 绘制像竖线一样从上到下 -->
+        <enum name="verticalLine" value="1" />
+        <!-- slash 斜线 / 绘制像斜线一样从左下到右上 -->
+        <enum name="slash" value="2" />
+        <!-- backslash 反斜线 \ 绘制像反斜线一样从左上到右下-->
+        <enum name="backslash" value="3" />
+    </attr>
+
+    <declare-styleable name="ScaleConstraintLayout">
+        <attr name="scale_mode">
+            <enum name="ZOOM_FACTOR_SMALL" value="1" />
+            <enum name="ZOOM_FACTOR_XSMALL" value="4" />
+            <enum name="ZOOM_FACTOR_XXSMALL" value="5" />
+            <enum name="ZOOM_FACTOR_XXXSMALL" value="6" />
+            <enum name="ZOOM_FACTOR_MEDIUM" value="2" />
+            <enum name="ZOOM_FACTOR_LARGE" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="GradientBorderLayout">
+        <attr name="xBorderWidth" format="dimension" />
+        <attr name="xStartColor" />
+        <attr name="xEndColor" />
+        <attr name="xCornersRadius" />
+        <attr name="xDrawMode" />
+    </declare-styleable>
+
+    <declare-styleable name="GradientProgressView">
+        <attr name="xStartColor" />
+        <attr name="xEndColor" />
+        <attr name="xCornersRadius" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomerFlowView">
+        <attr name="textPaddingStart" format="dimension" />
+        <attr name="textPaddingTop" format="dimension" />
+    </declare-styleable>
+
+</resources>

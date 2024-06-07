@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_content_back"
+        android:layout_width="69dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="@dimen/src_dp_40"
+        android:layout_marginTop="@dimen/src_dp_35"
+        android:background="@mipmap/ic_back_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_home_content_left"
+        android:layout_width="194dp"
+        android:layout_height="287dp"
+        android:layout_marginStart="149dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_home_content_left_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_content_desc"
+        android:layout_width="440dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/src_dp_20"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_home_content_left"
+        app:layout_constraintStart_toEndOf="@+id/iv_home_content_left"
+        app:layout_constraintTop_toTopOf="@+id/iv_home_content_left"
+        android:gravity="center_horizontal">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nv_content_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbarThumbVertical="@drawable/ic_scroll_line_ffffff_bg"
+            android:scrollbarTrackVertical="@drawable/ic_scroll_line_66ffffff_bg"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:layout_margin="10dp"
+            android:theme="@style/notFocusedBackground">
+
+            <TextView
+                android:id="@+id/tv_rule_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1000"
+                android:textColor="#999999"
+                android:textSize="@dimen/src_font_13"
+                android:paddingEnd="3dp" />
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

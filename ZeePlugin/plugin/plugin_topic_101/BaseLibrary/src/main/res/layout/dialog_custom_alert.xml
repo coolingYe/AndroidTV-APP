@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/dialog_custom_bg">
+
+    <TextView
+        android:id="@+id/txt_tip_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/src_dp_16"
+        android:layout_marginTop="8dp"
+        android:text="@string/tips"
+        android:fontFamily="@font/font_demibold"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close_dialog"
+        android:layout_width="@dimen/src_dp_15"
+        android:layout_height="@dimen/src_dp_15"
+        android:layout_marginTop="@dimen/src_dp_12"
+        android:layout_marginEnd="@dimen/src_dp_15"
+        android:padding="@dimen/src_dp_3"
+        android:src="@drawable/selector_dialog_close_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_message_dialog"
+        android:layout_width="45dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="65dp"
+        android:contentDescription="@null"
+        android:background="@mipmap/icon_alert_tip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_message_content_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/img_message_dialog"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_message_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/font_demibold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_message_summary_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#899AAF"
+            android:textSize="13sp"
+            android:fontFamily="@font/font_demibold"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_positive_cancel_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="39dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/img_message_dialog">
+
+        <TextView
+            android:id="@+id/txt_cancel_dialog"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="@dimen/src_dp_20"
+            android:background="@drawable/selector_c24_frame_dialog_custom_btn"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:fontFamily="@font/font_demibold"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/txt_positive_dialog"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_positive_dialog"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="@dimen/src_dp_20"
+            android:background="@drawable/selector_c24_frame_dialog_custom_btn"
+            android:gravity="center"
+            android:text="确定"
+            android:fontFamily="@font/font_demibold"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/txt_cancel_dialog"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_confirm_dialog"
+        android:layout_width="91dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/selector_c24_frame_dialog_custom_btn"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_message_content_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

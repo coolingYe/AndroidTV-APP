@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/src_dp_5"
+        android:right="@dimen/src_dp_5"
+        android:top="@dimen/src_dp_5"
+        android:bottom="@dimen/src_dp_5">
+        <shape>
+            <solid android:color="@color/white" />
+            <corners android:radius="13dp" />
+
+            <gradient
+                android:startColor="@color/user_collect_background_start_color"
+                android:endColor="@color/user_collect_background_end_color" />
+        </shape>
+    </item>
+</layer-list>

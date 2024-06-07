@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="292dp"
+        android:layout_height="153dp"
+        android:background="@drawable/shape_corner20_frame"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="41dp"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="检测到新版本，快来体验吧！"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/positive"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/selector_corner50_frame_dialog"
+                android:focusable="true"
+                android:text="确定"
+                android:textColor="@drawable/selector_dialog_text_bg"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/selector_corner50_frame_dialog"
+                android:focusable="true"
+                android:text="取消"
+                android:textColor="@drawable/selector_dialog_text_bg"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="all_focused_frame_color">#FFFE9B</color>
+    <color name="dialog_btn_text_color">#488B77</color>
+    <color name="exception_case_color">#999999</color>
+    <color name="dialog_content_text_color">#CB1912</color>
+    <color name="dialog_summary_text_color">#CB1912</color>
+</resources>

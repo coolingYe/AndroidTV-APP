@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="45dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:layout_width="332dp"
+        android:layout_height="384dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="31dp"
+        android:src="@mipmap/img_login_logo"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:id="@+id/ll_user_bind_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="424dp">
+
+        <TextView
+            style="@style/GuideRightPanelTitle"
+            android:layout_marginStart="0dp"
+            android:text="请选择以下账号登录" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@drawable/shape_c3_7f956ce6"
+            android:fadeScrollbars="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_user_bind_select_prev"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="29dp"
+        android:focusable="true"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:rippleColor="@color/rippleColor"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:id="@+id/txt_user_bind_select_prev"
+            style="@style/GuideButtonC5"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:text="上一步" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

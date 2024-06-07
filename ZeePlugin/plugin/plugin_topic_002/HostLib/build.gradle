@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        flavorDimensions "root"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    productFlavors {
+        single {
+            dimension "root"
+        }
+
+        plugin {
+            dimension "root"
+        }
+    }
+}
+
+dependencies {
+    api rootProject.ext.dependencies.junit
+    api rootProject.ext.dependencies.junitExt
+    api rootProject.ext.dependencies.espresso
+    api "com.qihoo360.replugin:replugin-plugin-lib:3.0.0"
+}

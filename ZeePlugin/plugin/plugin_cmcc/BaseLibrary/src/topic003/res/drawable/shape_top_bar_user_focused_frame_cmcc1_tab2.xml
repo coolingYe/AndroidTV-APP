@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:left="4dp"
+                android:top="4dp"
+                android:right="4dp"
+                android:bottom="4dp" />
+            <corners android:radius="@dimen/all_top_bar_frame_radius"/>
+            <stroke
+                android:width="@dimen/all_focused_frame_stroke_width"
+                android:color="@color/tab2_focused_frame_color" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/all_top_bar_frame_radius"/>
+            <solid android:color="#4DF99521" />
+        </shape>
+    </item>
+</layer-list>
+

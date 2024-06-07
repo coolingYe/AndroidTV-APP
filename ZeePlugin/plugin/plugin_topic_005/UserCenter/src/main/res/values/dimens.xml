@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="focusBtnHeight">53dp</dimen>
+    <dimen name="focusBtnWidth">261dp</dimen>
+    <dimen name="menuSize">28dp</dimen>
+
+    <dimen name="recycleview_item_spacing_20">20px</dimen>
+    <dimen name="recycleview_item_spacing_30">30px</dimen>
+</resources>

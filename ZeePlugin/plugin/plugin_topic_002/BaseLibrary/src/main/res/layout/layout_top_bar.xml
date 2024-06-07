@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_launcher_bar_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_user_top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:background="@drawable/selector_c16_frame_4dffffff_0"
+        android:padding="@dimen/src_dp_3"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_user_top_bar"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@mipmap/top_bar_user_login" />
+
+        <TextView
+            android:id="@+id/txt_user_top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="16"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_top_bar_search_left"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="@dimen/src_dp_15"
+        android:background="@drawable/selector_top_bar_search"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ll_user_top_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_top_bar_search_right"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="@dimen/src_dp_15"
+        android:background="@drawable/selector_top_bar_search"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_settings_top_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_top_bar_back"
+        android:layout_width="56dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="45dp"
+        android:paddingStart="2.5dp"
+        android:paddingEnd="2.5dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1.5dp"
+        android:background="@drawable/selector_top_bar_back"
+        android:contentDescription="@null"
+        android:src="@mipmap/top_bar_back"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_top_bar_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:text="@string/product_name"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextClock
+        android:id="@+id/tp_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:format12Hour="hh:mm"
+        android:textColor="@android:color/white"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/txt_top_bar_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_wifi_top_bar"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@null"
+        android:background="@drawable/selector_c16_frame_ffffff_0"
+        android:src="@mipmap/top_bar_wifi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tp_time"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_settings_top_bar"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@null"
+        android:background="@drawable/selector_c16_frame_ffffff_0"
+        android:src="@mipmap/top_bar_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_wifi_top_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fl_top_bar_center"
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</merge>

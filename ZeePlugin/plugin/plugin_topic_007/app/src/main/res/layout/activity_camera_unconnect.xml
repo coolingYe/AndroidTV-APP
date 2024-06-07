@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="661dp"
+    android:layout_height="390dp"
+    android:background="@drawable/gradient_ffffff_e9f4ff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_unconnect_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-black"
+        android:text="交互模式选择"
+        android:textColor="#333333"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_cancel"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="27dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#30FFFFFF">
+
+        <ImageView
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:padding="6dp"
+            android:src="@mipmap/icon_cancel"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="1dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_cam_exception_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="9dp"
+        android:text="当前未接入摄像头，您可直接使用遥控器模式或AI交互模式（需连接摄像头）"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unconnect_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="遥控器模式："
+        android:textSize="19sp"
+        android:textColor="#387EFF"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_model1"
+        app:layout_constraintStart_toStartOf="@+id/ll_model1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_model1"
+        android:layout_width="176dp"
+        android:layout_height="219dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/selector_choose_1"
+        android:elevation="1dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="129dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="64dp"
+            android:src="@mipmap/icon_remote_control" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="指尖操作，一触即达"
+            android:textColor="#387EFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="42dp"
+        android:background="#DFDFDF"
+        app:layout_constraintStart_toEndOf="@+id/ll_model1"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI交互模式："
+        android:textSize="19sp"
+        android:textColor="#754AFF"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_model2"
+        app:layout_constraintStart_toStartOf="@+id/ll_model2"/>
+
+    <LinearLayout
+        android:id="@+id/ll_model2"
+        android:layout_width="176dp"
+        android:layout_height="219dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/selector_choose_2"
+        android:elevation="1dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ll_model1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="外接USB摄像头"
+            android:textColor="#525252"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="17dp"
+            android:src="@mipmap/img_usb_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="传输稳定，体验流畅"
+            android:textColor="#387EFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_model3"
+        android:layout_width="176dp"
+        android:layout_height="219dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/selector_choose_2"
+        android:elevation="1dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ll_model2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="连接手机摄像头"
+            android:textColor="#525252"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="49dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="21dp"
+            android:src="@mipmap/img_photo_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="便捷灵活，随时随地体验"
+            android:textColor="#387EFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

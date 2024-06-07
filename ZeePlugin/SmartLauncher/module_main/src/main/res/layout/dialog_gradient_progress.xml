@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zeewain.base.widgets.GradientBorderLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="832dp"
+    android:layout_height="96dp"
+    android:layout_gravity="center"
+    app:xBorderWidth="2dp"
+    app:xCornersRadius="10dp"
+    app:xDrawMode="horizontalLine"
+    app:xEndColor="@color/colorSlateBlue"
+    app:xStartColor="@color/colorDeepPink">
+
+    <TextView
+        android:id="@+id/txt_title_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="11dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:text="正在更新"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.zeewain.base.widgets.GradientProgressView
+        android:id="@+id/gradient_progress_view"
+        android:layout_width="789dp"
+        android:layout_height="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_progress"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shape_corner4_d9d9d9"
+        app:xCornersRadius="4dp"
+        app:xStartColor="#5758E1"
+        app:xEndColor="#AF3871"/>
+
+
+    <TextView
+        android:id="@+id/txt_value_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_positive_cancel_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_positive_progress"
+            android:layout_width="91dp"
+            android:layout_height="24dp"
+            android:background="@drawable/gradient_h_corners19_af3871_575be1"
+            android:text="重试"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/txt_cancel_progress"
+            android:layout_width="91dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/gradient_h_corners19_af3871_575be1"
+            android:text="关闭"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</com.zeewain.base.widgets.GradientBorderLayout>

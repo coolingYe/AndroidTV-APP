@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main_product_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:theme="@style/notFocusedBackground"
+    android:layout_marginStart="@dimen/src_dp_14">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_main_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:minWidth="166dp"
+        android:minHeight="96dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="12.5dp"
+        app:cardElevation="0dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_main_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false">
+
+            <ImageView
+                android:id="@+id/iv_main_item_product"
+                android:layout_width="160dp"
+                android:layout_height="90dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_main_product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/src_dp_6"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/src_font_14" />
+</LinearLayout>

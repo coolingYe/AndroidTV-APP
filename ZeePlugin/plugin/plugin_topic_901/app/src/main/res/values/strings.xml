@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">plugin_home</string>
+    <string name="resume">简介:</string>
+    <string name="current_version">当前版本</string>
+    <string name="the_developer">开发商</string>
+    <string name="the_operator">运营商</string>
+    <drawable name="bkcolor">#00ffffff</drawable>
+</resources>

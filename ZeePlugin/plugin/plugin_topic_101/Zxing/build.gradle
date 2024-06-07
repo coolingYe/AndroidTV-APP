@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        flavorDimensions "root"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        single {
+            dimension "root"
+        }
+
+        plugin {
+            dimension "root"
+        }
+    }
+}
+
+dependencies {
+    pluginCompileOnly files('libs/core-3.4.1.jar')
+    singleImplementation files('libs/core-3.4.1.jar')
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_item_user_info_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="6dp"
+    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+    android:focusable="true"
+    android:nextFocusLeft="@id/card_user_bind_select_prev"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:rippleColor="@color/rippleColor"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:id="@+id/ll_item_user_info_root"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/img_item_user_pic"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/icon_user_bind_pic"
+            android:layout_marginStart="25dp"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="18dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_item_user_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_item_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="9sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

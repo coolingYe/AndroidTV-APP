@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_launcher_bar_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_user_top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/selector_c24_frame_ffffff"
+        android:focusable="true"
+        android:layout_marginStart="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:duplicateParentState="true"
+            android:id="@+id/img_user_top_bar"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/selector_top_bar_user"
+            android:scaleType="fitXY"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/txt_user_top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:maxLength="16"
+            android:ellipsize="end"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_top_bar_back"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/selector_top_bar_back"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_top_bar_offset"
+        android:layout_width="34dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_top_bar_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toLeftOf="@+id/view_top_bar_offset"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:textColor="#AE6A4C"
+        android:textSize="18sp"
+        android:text="AR元宇宙"
+        />
+
+    <com.zeewain.base.widgets.CustomTextClock
+        android:id="@+id/tp_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:format24Hour="HH:mm"
+        android:textColor="#FEFFFF"
+        android:textSize="21sp"
+        app:layout_constraintRight_toLeftOf="@+id/txt_top_bar_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/img_wifi_top_bar"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/selector_top_bar_wifi"
+        android:background="@drawable/selector_c24_frame_ffffff"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintRight_toLeftOf="@+id/tp_time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@null" />
+
+    <ImageView
+        android:id="@+id/img_settings_top_bar"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/selector_top_bar_settings"
+        android:background="@drawable/selector_c24_frame_ffffff"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintRight_toLeftOf="@+id/img_wifi_top_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@null" />
+
+    <FrameLayout
+        android:id="@+id/fl_top_bar_center"
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:id="@+id/tv_user_common_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="全部"
+        android:textColor="#FEFFFF"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:id="@+id/tv_home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="首页"
+        android:textColor="#FEFFFF"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</merge>

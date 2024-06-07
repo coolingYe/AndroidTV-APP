@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="756dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/shape_c5_ffffff_frame_8541ce">
+
+    <TextView
+        android:id="@+id/txt_title_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#666666"
+        android:textSize="18sp"
+        android:text="正在更新软件"/>
+
+    <com.zeewain.base.widgets.GradientProgressView
+        android:id="@+id/gradient_progress_view"
+        android:layout_width="716dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_corner4_d9d9d9"
+        app:xCornersRadius="7dp"
+        app:xStartColor="#0800f8"
+        app:xEndColor="#8541ce"/>
+
+
+    <TextView
+        android:id="@+id/txt_value_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#999999"
+        android:textSize="15sp"
+        android:gravity="right"/>
+
+    <LinearLayout
+        android:id="@+id/ll_positive_cancel_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_positive_progress"
+            android:layout_width="91dp"
+            android:layout_height="24dp"
+            android:background="@drawable/gradient_h_c5_0800f8_8541ce"
+            android:text="重试"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/txt_cancel_progress"
+            android:layout_width="91dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/gradient_h_c5_0800f8_8541ce"
+            android:text="设置"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_leaderboard_layout"
+    android:layout_width="421dp"
+    android:layout_height="56dp"
+    android:layout_marginBottom="@dimen/src_dp_11">
+
+    <TextView
+        android:id="@+id/tv_top_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/src_dp_25"
+        android:ellipsize="end"
+        android:fontFamily="@font/font_bold"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tv_self_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/font_bold"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/src_font_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/leaderboard_lose" />
+
+    <TextView
+        android:id="@+id/tv_company_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="150dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:fontFamily="@font/font_alibaba_bold"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/src_font_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="紫为云科技有限公司"/>
+
+    <TextView
+        android:id="@+id/tv_result_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="342dp"
+        android:layout_marginEnd="@dimen/src_dp_16"
+        android:ellipsize="end"
+        android:fontFamily="@font/font_bold"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="500" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

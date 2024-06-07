@@ -1,0 +1,22 @@
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="purple_text">#6C5DD3</color>
+    <color name="user_center_item_color_select">#4D4D4D</color>
+    <color name="focus_input_color">#575757</color>
+    <color name="normal_button_color">#47969696</color>
+    <color name="background_start_color">#402E6A</color>
+    <color name="background_end_color">#232148</color>
+    <color name="user_collect_background_start_color">#4DE3E3E4</color>
+    <color name="user_collect_background_end_color">#4D747579</color>
+    <color name="mine_msg_notify_tv_focus_color">#6541C5</color>
+    <string name="account_login_input1_hint">请输入手机号/账号</string>
+    <string name="message_login_input1_hint">请输入手机号</string>
+    <string name="account_login_input2_hint">请输入密码</string>
+    <string name="message_login_input2_hint">请输入验证码</string>
+    <string name="toast_accept_treaty">请阅读并同意《用户协议》和《隐私政策》</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all">全部</string>
+</resources>

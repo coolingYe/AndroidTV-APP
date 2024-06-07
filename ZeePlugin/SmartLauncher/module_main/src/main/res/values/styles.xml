@@ -1,0 +1,99 @@
+<resources>
+    <style name="FocusStyle">
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!--对话框透明背景-->
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--提示框背景（透明）-->
+    <!--   <item name="background">@drawable/shape_corner20_frame</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+    <style name="SettingsItemStyle">
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_width">404dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="UserDataItemStyle">
+        <item name="android:layout_height">97dp</item>
+        <item name="android:layout_width">130dp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+
+    <style name="UpgradeDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="SettingsTileItemStyle">
+        <item name="android:layout_height">112dp</item>
+        <item name="android:layout_width">334dp</item>
+        <item name="android:paddingStart">23dp</item>
+        <item name="android:paddingEnd">17dp</item>
+        <item name="android:paddingTop">30dp</item>
+        <item name="android:paddingBottom">30dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/selector_settings_tile_item</item>
+    </style>
+    <!--<style name="SettingsTileItemBorderStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="xBorderWidth">2dp</item>
+        <item name="xDrawMode">horizontalLine</item>
+        <item name="xCornersRadius">10dp</item>
+        <item name="xStartColor">#575BE1</item>
+        <item name="xEndColor">#AF3871</item>
+    </style>-->
+
+    <style name="Theme.ZeeLauncher" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Theme.ZeeLauncher.Main" parent="Theme.ZeeLauncher">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@mipmap/img_default_bg</item>
+    </style>
+
+
+    <style name="Theme.CustomMyDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>

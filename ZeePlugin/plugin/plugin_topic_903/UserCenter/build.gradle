@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        flavorDimensions "root", "child"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        single {
+            dimension "root"
+        }
+
+        plugin {
+            dimension "root"
+        }
+
+        topic903 {
+            dimension "child"
+        }
+
+        topic008 {
+            dimension "child"
+        }
+
+        topic009 {
+            dimension "child"
+        }
+    }
+}
+
+dependencies {
+    implementation project(':BaseLibrary')
+    compileOnly project(path: ':ZeeManager')
+    compileOnly project(path: ':DownloadLib')
+    implementation project(path: ':HostLib')
+}

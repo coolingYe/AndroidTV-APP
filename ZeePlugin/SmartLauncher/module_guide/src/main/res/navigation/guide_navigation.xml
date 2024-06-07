@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/guide_navigation"
+    app:startDestination="@id/nav_guide_start">
+
+    <fragment
+        android:id="@+id/nav_guide_start"
+        android:name="com.zee.guide.ui.start.StartFragment"
+        android:label="start"/>
+
+    <fragment
+        android:id="@+id/nav_guide_wifi"
+        android:name="com.zee.guide.ui.wifi.WifiSettingFragment"
+        android:label="wifi"/>
+
+    <fragment
+        android:id="@+id/nav_guide_activation_check"
+        android:name="com.zee.guide.ui.activation.ActivationCheckFragment"
+        android:label="activation"/>
+</navigation>

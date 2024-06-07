@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_main_home_bg"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/img_top_bar_back"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_top_bar_back"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        android:visibility="visible"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@mipmap/img_list_title"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="420dp"
+        android:layout_height="38dp"/>
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="35dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:visibility="invisible">
+
+        <FrameLayout
+            android:id="@+id/fl_product_image"
+            android:layout_width="581dp"
+            android:layout_height="333dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="12dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <RelativeLayout
+                android:layout_width="557dp"
+                android:layout_height="313dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/img_large_back">
+
+                <include
+                    layout="@layout/layout_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="5dp">
+
+                    <ImageView
+                        android:id="@+id/img_product_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop" />
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/load_progress"
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="298dp"
+            android:layout_height="313dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@mipmap/img_detail_inter_desc_bg"
+            android:orientation="vertical"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_product_title_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="14dp"
+                android:textColor="#25363E"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_product_hot" />
+
+                <TextView
+                    android:id="@+id/txt_product_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="#99000000"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_c2_7fffa200"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/icon_time" />
+
+                    <TextView
+                        android:id="@+id/txt_product_cost_time_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:textColor="#435582"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/shape_c2_7fffa200"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/icon_difficulty" />
+
+                    <TextView
+                        android:id="@+id/txt_product_difficulty_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:textColor="#435582"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/shape_c2_7fffa200"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/icon_played" />
+
+                    <TextView
+                        android:id="@+id/txt_product_played_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:textColor="#435582"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_product_summary_detail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:maxLines="1000"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textColor="#7F98A4"
+                android:textSize="14sp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_collect_share_layout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout
+
+                    android:defaultFocusHighlightEnabled="false"
+                    android:id="@+id/layout_download_detail"
+                    android:layout_width="230dp"
+                    android:layout_height="34dp"
+                    android:background="@mipmap/ic_download_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.zeewain.base.widgets.GradientProgressView
+                        android:nextFocusUp="@+id/img_top_bar_back"
+                        android:id="@+id/gradient_progress_view_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:xCornersRadius="0dp"
+                        app:topLeftCornersRadius="5dp"
+                        app:topRightCornersRadius="0dp"
+                        app:bottomLeftCornersRadius="0dp"
+                        app:bottomRightCornersRadius="5dp"
+                        app:xEndColor="#57E4F3"
+                        app:xStartColor="#57E4F3" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/download_icon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:src="@mipmap/icon_download" />
+
+                        <TextView
+                            android:id="@+id/download_pro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:gravity="center_vertical"
+                            android:text="下载"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/img_share_detail"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/selector_c16_frame_fa8219_0"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/icon_share"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/img_collect_detail"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/selector_c16_frame_fa8219_0"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/icon_collect"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/img_share_detail"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txt_off_the_shelf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"
+                android:text="课件已下架!"
+                android:gravity="center"
+                android:textColor="#FF3333"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txt_detail_guess_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="5dp"
+            android:text="猜你喜欢"
+            android:textColor="#25363E"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fl_product_image" />
+
+        <com.zee.paged.HorizontalRecyclerView
+            android:visibility="gone"
+            android:id="@+id/recycler_view_guess_like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_guess_like" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.zeewain.base.widgets.LoadingView
+        android:id="@+id/loadingView_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/networkErrView_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

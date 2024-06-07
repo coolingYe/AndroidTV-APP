@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_leaderboard_bg">
+
+    <View
+        android:id="@+id/view_leaderboard_back"
+        android:layout_width="69dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="@dimen/src_dp_40"
+        android:layout_marginTop="27dp"
+        android:background="@mipmap/ic_back_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="86dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="@dimen/src_dp_20"
+        android:background="@mipmap/ic_leaderboard_title_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_leaderboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_pic_layout"
+            android:layout_width="488dp"
+            android:layout_height="610dp"
+            android:layout_marginTop="73dp"
+            android:scaleType="fitStart"
+            android:src="@mipmap/ic_leaderboard_left_pic_hdpi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_ranking_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry">
+
+            <LinearLayout
+                android:id="@+id/ll_leaderboard_frame"
+                android:layout_width="455dp"
+                android:layout_height="355dp"
+                android:layout_marginTop="45dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center">
+
+            <com.zee.launcher.home.widgets.VerticalRecyclerView
+                android:id="@+id/rv_ranking"
+                android:layout_width="435dp"
+                android:layout_height="335dp"
+                android:paddingEnd="9dp"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbarThumbVertical="@drawable/ic_scroll_line_663eff_b25ced_bg"
+                android:scrollbars="vertical"
+                android:theme="@style/notFocusedBackground"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_ranking_view" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_leaderboard_dividing_line"
+                android:layout_width="443dp"
+                android:layout_height="31dp"
+                android:layout_marginBottom="105dp"
+                android:background="@mipmap/ic_leaderboard_dividing_line_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <include
+                android:id="@+id/self_view"
+                layout="@layout/item_ranking_view"
+                android:layout_width="421dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="@dimen/src_dp_7"
+                android:layout_marginEnd="14dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_leaderboard_dividing_line"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.zeewain.base.widgets.LoadingView
+        android:id="@+id/loadingView_leaderboard_classic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/networkErrView_leaderboard_classic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

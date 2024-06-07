@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="784dp"
+        android:layout_height="87dp"
+        android:background="@mipmap/ic_user_info_top_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="730dp"
+        android:layout_height="93dp"
+        android:background="@mipmap/ic_user_info_bottom_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="402dp"
+        android:layout_marginStart="18dp"
+        android:background="@mipmap/ic_user_info_left_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="402dp"
+        android:layout_marginEnd="18dp"
+        android:background="@mipmap/ic_user_info_right_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_user_info_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_user_info_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="81dp"
+            android:fontFamily="@font/font_demibold"
+            android:text="@string/user_info_description"
+            android:textColor="#A6A5B0"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_user_info"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.zeewain.base.widgets.GradientTextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_info_name"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/spacer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_user_name_value" />
+
+            <com.zeewain.base.widgets.GradientTextView
+                android:id="@+id/tv_user_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_info_company_name"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/spacer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_user_company_name_value" />
+
+            <com.zeewain.base.widgets.GradientTextView
+                android:id="@+id/tv_user_company_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_info_company_address"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/spacer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_user_company_address_value" />
+
+            <com.zeewain.base.widgets.GradientTextView
+                android:id="@+id/tv_user_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_info_tel"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/spacer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_user_tel_value" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/spacer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.27" />
+
+            <TextView
+                android:id="@+id/tv_user_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="260dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/font_bold"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/spacer"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+
+            <TextView
+                android:id="@+id/tv_user_company_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:maxWidth="260dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/font_bold"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/spacer"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_name_value"
+                tools:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+
+            <TextView
+                android:id="@+id/tv_user_company_address_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:maxWidth="260dp"
+                android:fontFamily="@font/font_bold"
+                android:paddingTop="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/spacer"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_company_name_value"
+                tools:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+
+            <TextView
+                android:id="@+id/tv_user_tel_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:maxWidth="260dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/font_bold"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/spacer"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_company_address_value"
+                tools:text="020-888888" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="85dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.zeewain.base.widgets.GradientTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_info_qr"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/src_font_18" />
+
+            <LinearLayout
+                android:layout_width="213dp"
+                android:layout_height="213dp"
+                android:layout_marginTop="@dimen/src_dp_15"
+                android:background="@mipmap/ic_user_qr_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_user_info_invitation_code"
+                    android:layout_width="168dp"
+                    android:layout_height="168dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_revise"
+            android:layout_width="281dp"
+            android:layout_height="89dp"
+            android:layout_marginBottom="32dp"
+            android:background="@mipmap/ic_user_info_revise_btn_bg"
+            android:gravity="center"
+            android:textSize="@dimen/src_font_36"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.zeewain.base.widgets.LoadingView
+        android:id="@+id/loading_user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/network_user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

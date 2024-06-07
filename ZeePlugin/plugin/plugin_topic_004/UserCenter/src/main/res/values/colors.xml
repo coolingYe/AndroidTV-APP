@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="user_center_left_item_title_color">#FFFFFF</color>
+    <color name="user_center_left_item_bg_color">#00000000</color>
+    <color name="user_center_product_title_color">#CB1912</color>
+    <color name="user_center_product_delete_bg_color">#66000000</color>
+    <color name="user_center_tab_title_color">#FFFFFF</color>
+    <color name="user_center_gradient_start_color">#FFFFFF</color>
+    <color name="user_center_gradient_end_color">#FFE169</color>
+</resources>

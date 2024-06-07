@@ -1,0 +1,30 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven {url "http://maven.geelib.360.cn/nexus/repository/replugin/"}
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.0'
+        //classpath "com.qihoo360.replugin:replugin-host-gradle:3.0.0"
+        classpath files('libs/replugin-host-gradle-3.0.0.jar')
+        classpath files('libs/apk-parser-2.6.10.jar')
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven {url "http://maven.geelib.360.cn/nexus/repository/replugin/"}
+    }
+}
+
+apply from: 'config.gradle'
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

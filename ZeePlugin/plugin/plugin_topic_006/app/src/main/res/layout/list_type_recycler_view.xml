@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_type_recycle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/src_dp_40"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/src_dp_10"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_module_item_title_icon"
+            android:layout_width="@dimen/src_dp_40"
+            android:layout_height="@dimen/src_dp_40"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_title_type_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/src_dp_6"
+            android:paddingEnd="@dimen/src_dp_6"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <com.zee.paged.HorizontalRecyclerView
+        android:id="@+id/recycler_view_type_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingStart="9dp"
+        android:paddingEnd="9dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_type_recycle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

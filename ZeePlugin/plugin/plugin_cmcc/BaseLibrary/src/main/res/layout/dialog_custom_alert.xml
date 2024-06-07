@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="319dp"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/ic_user_center_delete_dialog">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/dialog_content_text_color"
+        android:textSize="13sp"
+        android:text="提示"/>
+
+    <ImageView
+        android:id="@+id/img_message_dialog"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="59dp"
+        android:background="@mipmap/icon_alert_tip"
+        android:contentDescription="@null"/>
+
+    <LinearLayout
+        android:id="@+id/ll_message_content_dialog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@+id/img_message_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/img_message_dialog"
+        app:layout_constraintLeft_toRightOf="@+id/img_message_dialog"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/txt_message_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dialog_content_text_color"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt_message_summary_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/dialog_summary_text_color"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_positive_cancel_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        app:layout_constraintTop_toBottomOf="@+id/img_message_dialog"
+        android:layout_marginTop="39dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_cancel_dialog"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:rippleColor="#30FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/card_positive_dialog"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_cancel_dialog"
+                android:layout_width="70dp"
+                android:layout_height="23dp"
+                android:background="@drawable/shape_dialog_btn_bg"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:gravity="center"
+                android:text="取消"
+                android:includeFontPadding="false"
+                android:textColor="@color/dialog_btn_text_color"
+                android:textSize="13sp"
+                app:layout_constraintHorizontal_chainStyle="packed" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_positive_dialog"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            android:layout_marginStart="37dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/card_cancel_dialog"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:rippleColor="#30FFFFFF">
+
+            <TextView
+                android:id="@+id/txt_positive_dialog"
+                android:layout_width="70dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/shape_dialog_btn_bg"
+                android:gravity="center"
+                android:text="确定"
+                android:includeFontPadding="false"
+                android:textColor="@color/dialog_btn_text_color"
+                android:textSize="13sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_confirm_dialog"
+        android:layout_width="91dp"
+        android:layout_height="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_message_content_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/shape_dialog_btn_bg"
+        android:visibility="gone"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/dialog_btn_text_color"
+        android:textSize="14sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

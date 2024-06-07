@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab2_focused_frame_color">#FFFFFF</color>
+    <color name="exception_case_color">#003117</color>
+
+    <!-- Details page  -->
+    <color name="details_title_color">#FFFBEA</color>
+    <color name="details_summary_color">#6C4B37</color>
+
+    <!-- UserCenter page -->
+    <color name="user_center_log_text_color">#6D1F05</color>
+    <color name="user_center_left_item_bg_color">#00000000</color>
+    <color name="user_center_left_item_title_color">#FFF3D2</color>
+    <color name="user_center_tab_title_color">#FFFFFF</color>
+    <color name="user_center_gradient_start_color">#FFFFFF</color>
+    <color name="user_center_gradient_end_color">#FFE169</color>
+    <color name="user_center_product_title_color">#FFFFFF</color>
+    <color name="user_center_product_delete_bg_color">#66000000</color>
+
+    <!-- Dialog -->
+    <color name="dialog_content_text_color">#088E78</color>
+    <color name="dialog_summary_text_color">#80078E77</color>
+    <color name="dialog_btn_text_color">#488B77</color>
+</resources>

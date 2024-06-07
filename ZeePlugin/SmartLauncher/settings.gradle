@@ -1,0 +1,11 @@
+rootProject.name = "SmartLauncher"
+include ':module_main'
+include ':module_guide'
+include ':BaseLibrary'
+include ':DownloadLib'
+include ':ZeeManager'
+include ':HostLib'
+include ':module_login'
+include ':ZeeAIManager'
+include ':Zxing'
+include ':ExternalServices'

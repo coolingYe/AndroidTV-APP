@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_c16_frame_fa8219_fecf7a_2" android:state_focused="true" />
+    <item android:drawable="@drawable/shape_c16_frame_fa8219_fecf7a_2" android:state_selected="true" />
+    <item android:drawable="@drawable/shape_c16_fecf7a_2"/>
+</selector>

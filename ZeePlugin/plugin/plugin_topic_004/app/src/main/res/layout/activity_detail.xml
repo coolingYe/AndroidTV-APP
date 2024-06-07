@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <com.zeewain.base.widgets.TopBarView
+        android:id="@+id/top_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="35dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:visibility="invisible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_product_detail_bg"
+            android:layout_width="557dp"
+            android:layout_height="313dp"
+            android:padding="9dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:theme="@style/notFocusedBackground"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                layout="@layout/layout_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#00000000"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0px"
+                app:cardPreventCornerOverlap="false">
+
+                <ImageView
+                    android:id="@+id/img_product_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/load_progress"
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_detail_desc"
+            android:layout_width="298dp"
+            android:layout_height="313dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/view_detail_desc"
+                android:layout_width="284dp"
+                android:layout_height="252dp"
+                android:layout_marginTop="54dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_product_title_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/src_dp_16"
+                android:layout_marginTop="@dimen/src_dp_16"
+                android:textSize="24sp"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="252dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/view_detail_desc"
+                app:layout_constraintStart_toStartOf="@+id/view_detail_desc"
+                app:layout_constraintTop_toTopOf="@+id/view_detail_desc">
+
+                <TextView
+                    android:id="@+id/txt_product_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="11dp"
+                    android:drawablePadding="3dp"
+                    android:textColor="#CB1912"
+                    android:textSize="9sp"
+                    android:drawableStart="@drawable/ic_product_hot" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_product_cost_time_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <ImageView
+                            android:id="@+id/iv_details_played_time"
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/txt_product_cost_time_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_product_difficulty_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <ImageView
+                            android:id="@+id/iv_details_difficulty"
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/txt_product_difficulty_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_product_played_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp">
+
+                        <ImageView
+                            android:id="@+id/iv_details_played_count"
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/txt_product_played_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_detail_summary"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1">
+
+                <com.zeewain.base.widgets.ScrollTextview
+                    android:id="@+id/txt_product_summary_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1000"
+                    android:includeFontPadding="false"
+                    android:paddingEnd="1dp"
+                    android:layout_margin="3dp"
+                    android:scrollbarStyle="outsideInset"
+                    android:scrollbarThumbVertical="@drawable/ic_scroll_line_bg"
+                    android:scrollbarTrackVertical="@drawable/ic_scroll_line_66ffffff_bg"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_collect_share_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginBottom="16dp">
+
+                    <FrameLayout
+                        android:id="@+id/layout_download_detail"
+                        android:layout_width="176dp"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="11dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.zeewain.base.widgets.GradientProgressView
+                            android:id="@+id/gradient_progress_view_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:xCornersRadius="24dp"
+                            app:xEndColor="#CB1912"
+                            app:xStartColor="#CB1912" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/download_icon"
+                                android:layout_width="@dimen/src_dp_14"
+                                android:layout_height="@dimen/src_dp_14"
+                                android:layout_marginEnd="@dimen/src_dp_9"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:src="@mipmap/icon_download" />
+
+                            <TextView
+                                android:id="@+id/download_pro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:text="下载"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/img_collect_detail"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginEnd="@dimen/src_dp_40"
+                        android:contentDescription="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/txt_off_the_shelf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="课件已下架!"
+                    android:textColor="#FF3333"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_detail_guess_like"
+            android:layout_width="103dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="@+id/ll_product_detail_bg"
+            app:layout_constraintTop_toBottomOf="@+id/ll_product_detail_bg"
+            android:visibility="gone"/>
+
+        <com.zee.paged.HorizontalRecyclerView
+            android:id="@+id/recycler_view_guess_like"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_detail_guess_like" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.zeewain.base.widgets.LoadingView
+        android:id="@+id/loadingView_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/networkErrView_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

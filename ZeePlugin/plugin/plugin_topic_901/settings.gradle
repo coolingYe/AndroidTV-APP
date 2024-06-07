@@ -1,0 +1,9 @@
+rootProject.name = "plugin_topic_901"
+include ':app'
+include ':BaseLibrary'
+//include ':HorizontalPaged'
+include ':DownloadLib'
+include ':ZeeManager'
+include ':HostLib'
+//include ':UserCenter'
+include ':sdk'

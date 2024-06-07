@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <com.zeewain.base.widgets.LoadingView
+        android:id="@+id/loadingView_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone" />
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/networkErrView_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"
+        android:clipToPadding="false"
+        android:clipChildren="false"/>
+
+    <LinearLayout
+        android:id="@+id/ll_main_device_operate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_main_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_device_reboot"
+                android:layout_width="96dp"
+                android:layout_height="32dp"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                app:rippleColor="@color/rippleColor">
+
+                <TextView
+                    android:id="@+id/txt_device_reboot"
+                    android:layout_width="90dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/gradient_h_c24_ffffff"
+                    android:gravity="center"
+                    android:text="重启"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_device_shutdown"
+                android:layout_width="96dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="24dp"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                app:rippleColor="@color/rippleColor">
+
+                <TextView
+                    android:id="@+id/txt_device_shutdown"
+                    android:layout_width="90dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/gradient_h_c24_ffffff"
+                    android:gravity="center"
+                    android:text="关机"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

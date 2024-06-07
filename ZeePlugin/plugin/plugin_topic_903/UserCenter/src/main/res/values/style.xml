@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <style name="gradientDialog">
+        <item name="android:windowBackground">@drawable/shape_dialog_mask_background</item>
+    </style>
+
+    <style name="FL_Wrap_center_Style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="IncludeEmptyItemStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:visibility">invisible</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="IncludeNeedLoginStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">140dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="IncludeReqFailedStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">140dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="IncludeLoadingStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">245dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="MineClearButtonStyle">
+        <item name="android:layout_width">126dp</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:text">全部删除</item>
+        <item name="android:textColor">@color/btn_text_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:background">@drawable/selector_margin_3_2</item>
+    </style>
+
+    <style name="inputTipsStyle">
+        <item name="android:textColor">#CCFF0000</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="smartDialogButtonDefaultStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/selector_dialog_pressed_text</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

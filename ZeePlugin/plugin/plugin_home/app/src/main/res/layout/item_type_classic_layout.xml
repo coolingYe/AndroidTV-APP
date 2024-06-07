@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_type_classic_root"
+    android:layout_width="168dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    app:cardBackgroundColor="#00000000"
+    app:rippleColor="#30FFFFFF"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <com.zee.launcher.home.widgets.ScanningConstraintLayout
+        android:id="@+id/scl_type_classic_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="3dp"
+        android:layout_margin="1dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/img_classic_item_shadow">
+
+        <LinearLayout
+            android:id="@+id/cl_type_classic_root"
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingBottom="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/shape_c5_ffffff"
+            android:layout_gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_type_classic"
+                android:layout_width="156dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="3dp"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardElevation="0px"
+                app:cardBackgroundColor="#00000000"
+                >
+                <ImageView
+                    android:id="@+id/img_type_classic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txt_type_classic_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="7dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_type_classic_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="7dp"
+                android:textColor="#999999"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+    </com.zee.launcher.home.widgets.ScanningConstraintLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="focusBtnHeight" tools:keep="@dimen/focusBtnHeight">53dp</dimen>
+    <dimen name="focusBtnWidth" tools:keep="@dimen/focusBtnWidth">261dp</dimen>
+    <dimen name="menuSize" tools:keep="@dimen/menuSize">28dp</dimen>
+
+    <dimen name="recycleview_item_spacing_20" tools:keep="@dimen/recycleview_item_spacing_20">20px</dimen>
+    <dimen name="recycleview_item_spacing_30" tools:keep="@dimen/recycleview_item_spacing_30">30px</dimen>
+</resources>

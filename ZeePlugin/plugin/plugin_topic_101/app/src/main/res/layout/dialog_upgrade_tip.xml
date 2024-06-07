@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="319dp"
+    android:layout_height="213dp"
+    android:background="@mipmap/img_upgrade_bg"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <TextView
+        android:id="@+id/txt_title_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="36dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txt_message_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_title_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_dialog"
+        android:layout_marginTop="7dp"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_positive_cancel_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_positive_dialog"
+            android:layout_width="94dp"
+            android:layout_height="33dp"
+            android:focusable="true"
+            android:nextFocusRight="@id/card_cancel_dialog"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/card_cancel_dialog"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#30FFFFFF">
+
+            <TextView
+                android:id="@+id/txt_positive_dialog"
+                android:layout_width="88dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_c12_6a63f5_ae87dd"
+                android:gravity="center"
+                android:text="立即升级"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                app:layout_constraintHorizontal_chainStyle="packed" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_cancel_dialog"
+            android:layout_width="94dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="37dp"
+            android:focusable="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/card_positive_dialog"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#30FFFFFF">
+
+            <TextView
+                android:id="@+id/txt_cancel_dialog"
+                android:layout_width="88dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_c12_cancel_19333333"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_confirm_dialog"
+        android:layout_width="91dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_c12_6a63f5_ae87dd"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

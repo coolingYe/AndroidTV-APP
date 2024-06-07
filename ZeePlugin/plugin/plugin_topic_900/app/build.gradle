@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+}
+
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+configurations {
+    cleanedAnnotations
+    compile.exclude group: 'org.jetbrains', module: 'annotations'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        flavorDimensions "root"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        single {
+            applicationId rootProject.ext.android.applicationId + ".single"
+            dimension "root"
+        }
+
+        plugin {
+            applicationId rootProject.ext.android.applicationId
+            dimension "root"
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs', '../sdk/libs'
+        }
+    }
+}
+
+apply plugin: 'replugin-plugin-gradle'
+repluginPluginConfig {
+    pluginName = "PLUGIN_TOPIC_900"
+    hostApplicationId = "com.zee.launcher"
+    hostAppLauncherActivity = "com.zwn.launcher.MainActivity"
+}
+
+dependencies {
+    implementation "com.qihoo360.replugin:replugin-plugin-lib:3.0.0"
+//    implementation project(path: ':DownloadLib')
+//    implementation project(path: ':ZeeManager')
+
+    compileOnly project(path: ':DownloadLib')
+    compileOnly project(path: ':ZeeManager')
+    api project(':BaseLibrary')
+    api project(':HorizontalPaged')
+    implementation project(path: ':UserCenter')
+    implementation project(path: ':HostLib')
+    implementation project(path: ':sdk')
+    //缓存 Video
+    implementation rootProject.ext.dependencies.videocache
+
+}
+

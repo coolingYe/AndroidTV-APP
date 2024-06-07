@@ -1,0 +1,116 @@
+plugins {
+    id 'com.android.application'
+}
+
+def mPluginName
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        flavorDimensions "root", "child"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        single {
+            dimension "root"
+        }
+
+        plugin {
+            dimension "root"
+        }
+
+        topic903 {
+            applicationId APPLICATION_ID_TOPIC_903
+            dimension "child"
+        }
+
+        topic008 {
+            applicationId APPLICATION_ID_TOPIC_008
+            dimension "child"
+        }
+
+        topic009 {
+            applicationId APPLICATION_ID_TOPIC_009
+            dimension "child"
+        }
+
+        productFlavors.all { flavor ->
+            if (name.contains("plugin")) {
+                flavor.manifestPlaceholders += [SETTING_PACKAGE_NAME: SETTING_PLUGIN_PACKAGE_NAME as String]
+            } else if (name.contains("single")) {
+                flavor.manifestPlaceholders += [SETTING_PACKAGE_NAME: SETTING_SINGLE_PACKAGE_NAME as String]
+            }
+            if (name.contains("topic903")) {
+                flavor.manifestPlaceholders += [PLUGIN_NAME: TOPIC_903_PLUGIN_NAME as String]
+                mPluginName = TOPIC_903_PLUGIN_NAME
+            } else if (name.contains("topic008")) {
+                flavor.manifestPlaceholders += [PLUGIN_NAME: TOPIC_008_PLUGIN_NAME as String]
+                mPluginName = TOPIC_008_PLUGIN_NAME
+            } else if (name.contains("topic009")) {
+                flavor.manifestPlaceholders += [PLUGIN_NAME: TOPIC_009_PLUGIN_NAME as String]
+                mPluginName = TOPIC_009_PLUGIN_NAME
+            }
+        }
+    }
+}
+
+// 这个plugin需要放在android配置之后，因为需要读取android中的配置项
+apply plugin: 'replugin-plugin-gradle'
+repluginPluginConfig {
+    pluginName = mPluginName
+    hostApplicationId = "com.zee.launcher"
+    hostAppLauncherActivity = "com.zwn.launcher.MainActivity"
+}
+
+dependencies {
+    implementation "com.qihoo360.replugin:replugin-plugin-lib:3.0.0"
+    singleImplementation project(path: ':DownloadLib')
+    singleImplementation project(path: ':ZeeManager')
+    pluginCompileOnly project(path: ':DownloadLib')
+    pluginCompileOnly project(path: ':ZeeManager')
+    api project(':BaseLibrary')
+    api project(':HorizontalPaged')
+    implementation project(path: ':UserCenter')
+    implementation project(path: ':HostLib')
+    //缓存 Video
+    implementation rootProject.ext.dependencies.videocache
+}
+

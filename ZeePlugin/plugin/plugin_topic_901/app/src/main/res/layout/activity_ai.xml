@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/bg_float_service"
+        android:layout_width="match_parent"
+        android:layout_height="380px">
+        <RelativeLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="250px">
+            <Button
+
+                android:layout_marginTop="62px"
+                android:layout_marginLeft="88px"
+                android:background="@mipmap/bg_button_left"
+                android:id="@+id/btn_app_left"
+                android:layout_width="416px"
+                android:layout_height="120px" />
+
+
+            <ImageView
+                android:background="@mipmap/bg_up_left"
+                android:layout_marginTop="206px"
+                android:layout_marginLeft="194px"
+                android:layout_width="228px"
+                android:layout_height="30px"/>
+            <Button
+                android:layout_marginRight="84px"
+                android:layout_marginTop="62px"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/bg_button_right"
+                android:id="@+id/btn_app_right"
+                android:layout_width="416px"
+                android:layout_height="120px"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/bg_up_right"
+                android:layout_marginTop="206px"
+                android:layout_marginRight="170px"
+                android:layout_width="224px"
+                android:layout_height="30px"/>
+        </RelativeLayout>
+
+        <com.zeewain.base.widgets.FloatProgressView
+            android:focusable="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/fl_progress_left"
+            app:xCornersRadius="30px"
+            app:xEndColor="#666A63F5"
+            app:xStartColor="#666A63F5"
+            android:layout_marginTop="62px"
+            android:layout_marginLeft="88px"
+            android:layout_width="416px"
+            android:layout_height="120px"/>
+
+        <com.zeewain.base.widgets.FloatProgressView
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            app:xCornersRadius="30px"
+            app:xEndColor="#666A63F5"
+            app:xStartColor="#666A63F5"
+            android:id="@+id/fl_progress_right"
+            android:layout_marginRight="84px"
+            android:layout_marginTop="62px"
+            android:layout_gravity="right"
+            android:layout_width="416px"
+            android:layout_height="120px"/>
+
+
+        <TextureView
+            android:id="@+id/textureView"
+            android:layout_width="640px"
+            android:layout_height="480px"
+            android:alpha="0"/>
+
+        <ImageView
+            android:layout_marginBottom="48px"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@mipmap/bg_zee_logo"
+            android:layout_width="462px"
+            android:layout_height="44px"/>
+
+        <ImageView
+            android:background="@mipmap/bg_qr_code"
+            android:layout_gravity="bottom|right"
+            android:layout_width="140px"
+            android:layout_height="140px"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

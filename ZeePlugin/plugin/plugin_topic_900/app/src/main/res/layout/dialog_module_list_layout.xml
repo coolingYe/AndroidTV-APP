@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="67dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardElevation="0px"
+    app:cardBackgroundColor="#7FA2A2A2">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_module_list_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</androidx.cardview.widget.CardView>

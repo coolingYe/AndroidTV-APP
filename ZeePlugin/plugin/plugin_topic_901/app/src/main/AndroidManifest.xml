@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zee.launcher.home"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- For MediaPipe -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".HomeApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Plugin_home">
+        <meta-data
+            android:name="com.qihoo360.plugin.name"
+            android:value="PLUGIN_TOPIC_901" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.detail.DetailActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.loading.LoadingPluginActivity" />
+        <activity
+            android:name=".ui.direct.DirectLoadingActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.helong.PageTurningActivity"
+            android:theme="@style/Theme.PageTurning"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.fitness.NationalFitnessActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+
+        <service android:name=".service.GestureCameraService"
+            android:foregroundServiceType="camera"
+            />
+    </application>
+
+</manifest>

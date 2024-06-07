@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven {url "http://maven.geelib.360.cn/nexus/repository/replugin/"}
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.4'
+        classpath "com.qihoo360.replugin:replugin-plugin-gradle:3.0.0"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven {url "http://maven.geelib.360.cn/nexus/repository/replugin/"}
+    }
+}
+
+apply from: 'config.gradle'
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

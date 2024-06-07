@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    tools:ignore="MissingDefaultResource">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:focusable="false"
+        android:id="@+id/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:focusable="false"
+            android:id="@+id/video_frame"
+            android:layout_width="489dp"
+            android:layout_height="287dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/icon_video_frame"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:visibility="gone"
+            android:focusable="false"
+            android:id="@+id/video_right_frame"
+            android:layout_width="170dp"
+            android:layout_height="265dp"
+            android:src="@mipmap/icon_right_frame"
+            app:layout_constraintTop_toTopOf="@+id/video_frame"
+            app:layout_constraintBottom_toBottomOf="@+id/video_frame"
+            app:layout_constraintRight_toRightOf="parent"
+           />
+
+        <ImageView
+            android:visibility="gone"
+            android:focusable="false"
+            android:id="@+id/video_left_frame"
+            android:layout_width="170dp"
+            android:layout_height="265dp"
+            android:scaleX="-1"
+            android:src="@mipmap/icon_right_frame"
+            app:layout_constraintTop_toTopOf="@+id/video_right_frame"
+            app:layout_constraintBottom_toBottomOf="@+id/video_right_frame"
+           app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="262dp"
+            android:focusable="false"
+            app:banner_auto_loop="false"
+            app:layout_constraintBottom_toBottomOf="@id/video_frame"
+            app:layout_constraintLeft_toLeftOf="@id/video_frame"
+            app:layout_constraintRight_toRightOf="@id/video_frame"
+            app:layout_constraintTop_toTopOf="@id/video_frame" />
+
+
+        <com.zee.launcher.home.widgets.MyVideoView
+            android:focusable="false"
+            android:id="@+id/video"
+            android:layout_width="465dp"
+            android:layout_height="262dp"
+            android:visibility="gone"
+            app:banner_auto_loop="false"
+            app:layout_constraintBottom_toBottomOf="@id/video_frame"
+            app:layout_constraintLeft_toLeftOf="@id/video_frame"
+            app:layout_constraintRight_toRightOf="@id/video_frame"
+            app:layout_constraintTop_toTopOf="@id/video_frame" />
+
+        <ProgressBar
+            android:focusable="false"
+            android:id="@+id/img_progress_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/video_frame"
+            app:layout_constraintLeft_toLeftOf="@id/video_frame"
+            app:layout_constraintRight_toRightOf="@id/video_frame"
+            app:layout_constraintTop_toTopOf="@id/video_frame" />
+
+        <ImageView
+            android:id="@+id/left_arrow_banner"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:defaultFocusHighlightEnabled="false"
+            android:focusable="true"
+            android:src="@mipmap/icon_left_arrow_banner"
+            app:layout_constraintBottom_toBottomOf="@+id/video_frame"
+            app:layout_constraintRight_toLeftOf="@+id/video_frame"
+            app:layout_constraintTop_toTopOf="@+id/video_frame" />
+
+        <ImageView
+            android:id="@+id/right_arrow_banner"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:defaultFocusHighlightEnabled="false"
+            android:focusable="true"
+            android:src="@mipmap/icon_right_arrow_banner"
+            app:layout_constraintBottom_toBottomOf="@+id/video_frame"
+            app:layout_constraintLeft_toRightOf="@+id/video_frame"
+            app:layout_constraintTop_toTopOf="@+id/video_frame" />
+
+        <ImageView
+            android:id="@+id/enter_detail"
+            android:layout_width="214dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="34dp"
+            android:background="@mipmap/icon_enter"
+            android:defaultFocusHighlightEnabled="false"
+            android:focusable="true"
+            app:layout_constraintLeft_toLeftOf="@+id/video_frame"
+            app:layout_constraintRight_toRightOf="@+id/video_frame"
+            app:layout_constraintTop_toBottomOf="@+id/video_frame" />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/app_title_bg"
+            android:focusable="false"
+            android:layout_width="472dp"
+            android:layout_height="52dp"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="14dp"
+            android:src="@mipmap/icon_title_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/video_frame"
+            app:layout_constraintLeft_toLeftOf="@id/video_frame"
+            app:layout_constraintRight_toRightOf="@id/video_frame" />
+
+        <TextView
+            android:visibility="gone"
+            android:focusable="false"
+            android:id="@+id/app_title"
+            android:layout_width="472dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="14dp"
+            android:gravity="center"
+            android:text="虚拟展厅"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/video_frame"
+            app:layout_constraintLeft_toLeftOf="@id/video_frame"
+            app:layout_constraintRight_toRightOf="@id/video_frame" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.zeewain.base.widgets.LoadingView
+        android:id="@+id/loadingView_home_classic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zeewain.base.widgets.NetworkErrView
+        android:id="@+id/networkErrView_home_classic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@mipmap/img_no_data_download" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="没有数据"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+plugins {
+    id 'com.android.application'
+}
+
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+static def releaseTime() {
+    new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            dimension "default"
+        }
+
+        stg {
+            dimension "default"
+        }
+
+        stgEx {
+            dimension "default"
+        }
+
+        prd {
+            dimension "default"
+        }
+    }
+
+    android.applicationVariants.all{
+        variant -> variant.outputs.all {
+            outputFileName = "SmartLauncher"  + "-" + variant.flavorName + "-" + buildType.name + "_v" + defaultConfig.versionName + "_${releaseTime()}.apk"
+        }
+    }
+}
+
+apply plugin: 'replugin-host-gradle'
+repluginHostConfig {
+    useAppCompat = true
+    useAndroidX = true
+    // 可以在这里自定义常驻进程的名字
+    // persistentName = ":XXXXService"
+}
+
+dependencies {
+
+    implementation project(':module_guide')
+    implementation project(':module_login')
+    implementation project(':DownloadLib')
+    implementation project(':ZeeManager')
+    implementation project(':ZeeAIManager')
+    implementation project(':HostLib')
+    implementation project(':Zxing')
+    implementation project(':ExternalServices')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //缓存 Video
+    api rootProject.ext.dependencies.videocache
+    implementation "com.qihoo360.replugin:replugin-host-lib:3.0.0"
+
+}

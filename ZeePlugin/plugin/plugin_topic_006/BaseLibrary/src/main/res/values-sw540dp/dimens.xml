@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sw_dp_3">3dp</dimen>
+    <dimen name="sw_dp_4">4dp</dimen>
+
+    <dimen name="all_focused_frame_stroke_width">1.5dp</dimen>
+    <dimen name="all_top_bar_frame_radius">24dp</dimen>
+    <dimen name="home_banner_focused_frame_stroke_width">1dp</dimen>
+    <dimen name="home_banner_frame_radius">6dp</dimen>
+    <dimen name="home_product_frame_radius">9dp</dimen>
+    <dimen name="detail_info_right_frame_radius">9dp</dimen>
+    <dimen name="detail_product_frame_radius">10dp</dimen>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="135dp"
+        android:layout_height="144dp"
+        android:focusable="false">
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:focusable="false"
+            android:src="@mipmap/net_error" />
+
+        <ImageView
+            android:id="@+id/iv_helper_tip"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:focusable="false"
+            android:background="#00000000"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_network_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:focusable="false"
+        android:text="@string/net_req_err_retry"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_network_retry"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:rippleColor="@color/rippleColor">
+
+            <TextView
+                android:id="@+id/txt_network_retry"
+                android:layout_width="90dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/gradient_h_c24_ffffff"
+                android:gravity="center"
+                android:text="重试"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_network_set"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="24dp"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:rippleColor="@color/rippleColor">
+
+            <TextView
+                android:id="@+id/txt_network_set"
+                android:layout_width="90dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/gradient_h_c24_ffffff"
+                android:gravity="center"
+                android:text="设置"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</LinearLayout>

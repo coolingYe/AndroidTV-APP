@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="not_support_now">"功能暂未开放，敬请期待"</string>
+    <string name="user">"用户"</string>
+    <string name="in_loading">"加载中"</string>
+    <string name="net_req_err_retry">"请求网络失败，刷新重试"</string>
+    <dimen name="top_bar_size">63dp</dimen>
+    <string name="leak_canary_test_class_name">assertk.Assert</string>
+</resources>
