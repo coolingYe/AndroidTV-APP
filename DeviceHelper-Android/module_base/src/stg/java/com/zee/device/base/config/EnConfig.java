@@ -1,0 +1,6 @@
+package com.zee.device.base.config;
+
+public class EnConfig {
+    public static final String BASE_URL = "https://test.local.zeewain.com";
+    public static final String BASE_PATH = "/api";
+}

@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.zee.device.base'
+    compileSdk rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdk rootProject.ext.android.minSdk
+        targetSdk rootProject.ext.android.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            dimension "default"
+        }
+
+        stg {
+            dimension "default"
+        }
+
+        prd {
+            dimension "default"
+        }
+    }
+}
+
+dependencies {
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.material
+    api rootProject.ext.dependencies.constraintlayout
+
+    api rootProject.ext.dependencies.navigation
+
+    api rootProject.ext.dependencies.fastjson
+
+    api rootProject.ext.dependencies.rxjava2
+    api rootProject.ext.dependencies.rxjava2Android
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.converterGson
+    api rootProject.ext.dependencies.adapterRxjava2
+
+
+    testImplementation rootProject.ext.dependencies.junit
+    androidTestImplementation rootProject.ext.dependencies.junitExt
+    androidTestImplementation rootProject.ext.dependencies.espresso
+
+    debugApi rootProject.ext.dependencies.leakcanary
+
+}

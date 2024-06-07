@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.settings.SettingsActivity">
+
+        <com.zee.device.base.widgets.CustomActionBar
+            android:id="@+id/cab_settings"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="紫星助手"
+            app:cTheme="light" />
+
+
+        <ImageView
+            android:id="@+id/iv_settings_logo"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:src="@mipmap/ic_settings_logo"
+            app:layout_constraintTop_toBottomOf="@+id/cab_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="56dp"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tv_settings_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/iv_settings_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="紫星助手"
+            android:textSize="18sp"
+            android:textColor="#333" />
+
+        <TextView
+            android:id="@+id/tv_settings_app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings_app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="紫星助手"
+            android:textSize="15sp"
+            android:textColor="#999" />
+
+        <LinearLayout
+            android:id="@+id/ll_settings_check_update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings_app_version"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="检测更新"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_next_arrow_black"
+                android:contentDescription="@null" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_settings_check_update"
+            android:background="#E6E6E6 " />
+
+
+        <LinearLayout
+            android:id="@+id/ll_settings_user_private"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_settings_check_update"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="用户隐私协议"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_next_arrow_black"
+                android:contentDescription="@null" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_settings_user_private"
+            android:background="#E6E6E6 " />
+
+        <LinearLayout
+            android:id="@+id/ll_settings_user_manual"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_settings_user_private"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="用户使用手册"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_next_arrow_black"
+                android:contentDescription="@null" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_settings_user_manual"
+            android:background="#E6E6E6 " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

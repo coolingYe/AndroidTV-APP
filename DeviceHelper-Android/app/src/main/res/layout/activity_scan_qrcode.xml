@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        tools:context=".ui.capture.ScanQrcodeActivity">
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/barcode_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+
+        <com.zee.device.base.widgets.CustomActionBar
+            android:id="@+id/cab_scan_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="扫一扫"
+            app:cTheme="dark"/>
+
+        <ImageView
+            android:id="@+id/iv_qrcode_helper_mask"
+            android:layout_width="match_parent"
+            android:layout_height="173dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@mipmap/img_scan_qrcode_helper_mask"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/iv_qrcode_helper_mask"
+            android:layout_marginTop="66dp"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                android:text="扫码关联盒子:"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:textSize="12sp"
+                android:textColor="#FFF"
+                android:text="1.在”把视互动平台”点击菜单栏\n2.选择”设备连接”\n3.扫描电视屏幕中的二维码并确认连接"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

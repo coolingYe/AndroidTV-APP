@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        mavenCentral()
+    }
+}
+rootProject.name = "ZeeDeviceHelper"
+include ':app'
+include ':module_base'
+//include ':Zxing'
+include ':wireless_camera'
+include ':module_home'
+include ':moudle_src'
+include ':DownloadLib'

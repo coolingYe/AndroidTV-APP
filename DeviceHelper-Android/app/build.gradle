@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+}
+
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+static def releaseTime() {
+    new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+android {
+    namespace rootProject.ext.android.applicationId
+    compileSdk rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            dimension "default"
+        }
+
+        stg {
+            dimension "default"
+        }
+
+        prd {
+            dimension "default"
+        }
+    }
+
+    android.applicationVariants.all{
+        variant -> variant.outputs.all {
+            outputFileName = "ZeeDeviceHelper"  + "-" + variant.flavorName + "-" + buildType.name + "_v" + defaultConfig.versionName + "_${releaseTime()}.apk"
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation project(path: ':module_base')
+    implementation project(path: ':module_home')
+    implementation project(path: ':wireless_camera')
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation rootProject.ext.dependencies.java_websocket
+
+    testImplementation rootProject.ext.dependencies.junit
+    androidTestImplementation rootProject.ext.dependencies.junitExt
+    androidTestImplementation rootProject.ext.dependencies.espresso
+}
