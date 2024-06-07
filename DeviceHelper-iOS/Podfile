@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ZeeHelper' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ZeeHelper
+  pod 'WCDB.swift'
+  pod 'GoogleWebRTC'
+  #pod 'Starscream', '~> 4.0.4'
+  pod 'Starscream'
+  pod 'PocketSocket'
+  pod 'SnapKit', '~> 5.0.0'
+end

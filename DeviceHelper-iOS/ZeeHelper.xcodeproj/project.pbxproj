@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B0588862BEDC6E700CB5D0E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0588852BEDC6E700CB5D0E /* SettingsView.swift */; };
+		1B1DE3322BE875EA00E15476 /* ZeeHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DE3312BE875EA00E15476 /* ZeeHelperApp.swift */; };
+		1B1DE3342BE875EA00E15476 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DE3332BE875EA00E15476 /* MainView.swift */; };
+		1B1DE3362BE875EC00E15476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DE3352BE875EC00E15476 /* Assets.xcassets */; };
+		1B1DE3392BE875EC00E15476 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DE3382BE875EC00E15476 /* Preview Assets.xcassets */; };
+		1B1DE3432BE878E000E15476 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DE3422BE878E000E15476 /* VideoView.swift */; };
+		1B3D811B2BECB6D800D3BF2A /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3D811A2BECB6D800D3BF2A /* DeviceView.swift */; };
+		1B4AA2552C004C8E0018D847 /* vertical_full_screen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B4AA2542C004C8E0018D847 /* vertical_full_screen.mp4 */; };
+		1B4FBF532C0B0C1D0072DF4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4FBF522C0B0C1D0072DF4B /* LaunchScreen.storyboard */; };
+		1B6C4A0C2C09E85800A596FE /* LocalNetworkPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C4A0B2C09E85800A596FE /* LocalNetworkPermission.swift */; };
+		1B6C68BD2BE8812E0089CC5B /* VideoCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C68BC2BE8812E0089CC5B /* VideoCallView.swift */; };
+		1B6C68C02BE884BD0089CC5B /* VideoCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C68BF2BE884BC0089CC5B /* VideoCallViewModel.swift */; };
+		1B6C68C22BE8B9B40089CC5B /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C68C12BE8B9B40089CC5B /* WebRTCClient.swift */; };
+		1B8496702BFC82B800E72CC3 /* PiPPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84966F2BFC82B800E72CC3 /* PiPPlayerView.swift */; };
+		1B8842952BF2012F00F37EA7 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8842942BF2012F00F37EA7 /* DatabaseManager.swift */; };
+		1B8842982BF2046A00F37EA7 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8842972BF2046A00F37EA7 /* Device.swift */; };
+		1B9B6E172BFF4C00004E95D0 /* PiPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B6E162BFF4C00004E95D0 /* PiPViewController.swift */; };
+		1BA2D7212BEF648800578EF0 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2D7202BEF648800578EF0 /* WebSocketClient.swift */; };
+		1BA2D7232BEF6A1600578EF0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2D7222BEF6A1600578EF0 /* Config.swift */; };
+		1BA2D7252BEF71B100578EF0 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2D7242BEF71B100578EF0 /* QRCodeScannerView.swift */; };
+		1BCF26652BF5AA1B004979A4 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF26642BF5AA1B004979A4 /* NetworkMonitor.swift */; };
+		1BCF26672BF5F303004979A4 /* SignalServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF26662BF5F303004979A4 /* SignalServer.swift */; };
+		582EBFE7DDAC27CFBB4BCF7E /* Pods_ZeeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0385C51B0D4F382D05E187 /* Pods_ZeeHelper.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B0588852BEDC6E700CB5D0E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1B1DE32E2BE875EA00E15476 /* ZeeHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeeHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B1DE3312BE875EA00E15476 /* ZeeHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeeHelperApp.swift; sourceTree = "<group>"; };
+		1B1DE3332BE875EA00E15476 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1B1DE3352BE875EC00E15476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B1DE3382BE875EC00E15476 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B1DE3422BE878E000E15476 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		1B3D811A2BECB6D800D3BF2A /* DeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
+		1B4AA2542C004C8E0018D847 /* vertical_full_screen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vertical_full_screen.mp4; sourceTree = "<group>"; };
+		1B4FBF522C0B0C1D0072DF4B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B6C4A0B2C09E85800A596FE /* LocalNetworkPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkPermission.swift; sourceTree = "<group>"; };
+		1B6C68BC2BE8812E0089CC5B /* VideoCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallView.swift; sourceTree = "<group>"; };
+		1B6C68BF2BE884BC0089CC5B /* VideoCallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewModel.swift; sourceTree = "<group>"; };
+		1B6C68C12BE8B9B40089CC5B /* WebRTCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCClient.swift; sourceTree = "<group>"; };
+		1B84966F2BFC82B800E72CC3 /* PiPPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiPPlayerView.swift; sourceTree = "<group>"; };
+		1B8842942BF2012F00F37EA7 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		1B8842972BF2046A00F37EA7 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		1B9B6E162BFF4C00004E95D0 /* PiPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiPViewController.swift; sourceTree = "<group>"; };
+		1BA2D7202BEF648800578EF0 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		1BA2D7222BEF6A1600578EF0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		1BA2D7242BEF71B100578EF0 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
+		1BAF5D7A2BEE07A100C10E67 /* ZeeHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeeHelper.entitlements; sourceTree = "<group>"; };
+		1BAF5D7B2BEE086400C10E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1BCF26642BF5AA1B004979A4 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		1BCF26662BF5F303004979A4 /* SignalServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalServer.swift; sourceTree = "<group>"; };
+		2B2DA2376303D8E01217C783 /* Pods-ZeeHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeeHelper.release.xcconfig"; path = "Target Support Files/Pods-ZeeHelper/Pods-ZeeHelper.release.xcconfig"; sourceTree = "<group>"; };
+		AA0385C51B0D4F382D05E187 /* Pods_ZeeHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeeHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB93BFEB62035804648A5614 /* Pods-ZeeHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeeHelper.debug.xcconfig"; path = "Target Support Files/Pods-ZeeHelper/Pods-ZeeHelper.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B1DE32B2BE875EA00E15476 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582EBFE7DDAC27CFBB4BCF7E /* Pods_ZeeHelper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B1DE3252BE875EA00E15476 = {
+			isa = PBXGroup;
+			children = (
+				1B1DE3302BE875EA00E15476 /* ZeeHelper */,
+				1B1DE32F2BE875EA00E15476 /* Products */,
+				F44DAF05C944E8E08CF97ECF /* Pods */,
+				2E80B40FF8EB9937F4A1F21D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1B1DE32F2BE875EA00E15476 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DE32E2BE875EA00E15476 /* ZeeHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B1DE3302BE875EA00E15476 /* ZeeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				1B973F592C07433900855F3D /* Auth */,
+				1B4AA2542C004C8E0018D847 /* vertical_full_screen.mp4 */,
+				1B8842932BF2010500F37EA7 /* DB */,
+				1BE7879B2BF4D4B500684D9C /* Socket */,
+				1BCF26632BF5A9F3004979A4 /* Utils */,
+				1B8842962BF203F000F37EA7 /* Model */,
+				1BAF5D7B2BEE086400C10E67 /* Info.plist */,
+				1BAF5D7A2BEE07A100C10E67 /* ZeeHelper.entitlements */,
+				1B6C68BE2BE8846F0089CC5B /* ViewModel */,
+				1B6C68BB2BE8809A0089CC5B /* Views */,
+				1B6C68C12BE8B9B40089CC5B /* WebRTCClient.swift */,
+				1B1DE3312BE875EA00E15476 /* ZeeHelperApp.swift */,
+				1B1DE3352BE875EC00E15476 /* Assets.xcassets */,
+				1B1DE3372BE875EC00E15476 /* Preview Content */,
+				1BA2D7222BEF6A1600578EF0 /* Config.swift */,
+				1B4FBF522C0B0C1D0072DF4B /* LaunchScreen.storyboard */,
+			);
+			path = ZeeHelper;
+			sourceTree = "<group>";
+		};
+		1B1DE3372BE875EC00E15476 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DE3382BE875EC00E15476 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1B6C68BB2BE8809A0089CC5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DE3422BE878E000E15476 /* VideoView.swift */,
+				1B6C68BC2BE8812E0089CC5B /* VideoCallView.swift */,
+				1B3D811A2BECB6D800D3BF2A /* DeviceView.swift */,
+				1B0588852BEDC6E700CB5D0E /* SettingsView.swift */,
+				1BA2D7242BEF71B100578EF0 /* QRCodeScannerView.swift */,
+				1B1DE3332BE875EA00E15476 /* MainView.swift */,
+				1B84966F2BFC82B800E72CC3 /* PiPPlayerView.swift */,
+				1B9B6E162BFF4C00004E95D0 /* PiPViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B6C68BE2BE8846F0089CC5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B6C68BF2BE884BC0089CC5B /* VideoCallViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B8842932BF2010500F37EA7 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				1B8842942BF2012F00F37EA7 /* DatabaseManager.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		1B8842962BF203F000F37EA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B8842972BF2046A00F37EA7 /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B973F592C07433900855F3D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1B6C4A0B2C09E85800A596FE /* LocalNetworkPermission.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		1BCF26632BF5A9F3004979A4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1BCF26642BF5AA1B004979A4 /* NetworkMonitor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1BE7879B2BF4D4B500684D9C /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2D7202BEF648800578EF0 /* WebSocketClient.swift */,
+				1BCF26662BF5F303004979A4 /* SignalServer.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		2E80B40FF8EB9937F4A1F21D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA0385C51B0D4F382D05E187 /* Pods_ZeeHelper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F44DAF05C944E8E08CF97ECF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB93BFEB62035804648A5614 /* Pods-ZeeHelper.debug.xcconfig */,
+				2B2DA2376303D8E01217C783 /* Pods-ZeeHelper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B1DE32D2BE875EA00E15476 /* ZeeHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B1DE33C2BE875EC00E15476 /* Build configuration list for PBXNativeTarget "ZeeHelper" */;
+			buildPhases = (
+				2F5785A96FA2AE9EC6AE92D5 /* [CP] Check Pods Manifest.lock */,
+				1B1DE32A2BE875EA00E15476 /* Sources */,
+				1B1DE32B2BE875EA00E15476 /* Frameworks */,
+				1B1DE32C2BE875EA00E15476 /* Resources */,
+				606F25F88F76F21282F74810 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeeHelper;
+			packageProductDependencies = (
+			);
+			productName = ZeeHelper;
+			productReference = 1B1DE32E2BE875EA00E15476 /* ZeeHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B1DE3262BE875EA00E15476 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					1B1DE32D2BE875EA00E15476 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 1B1DE3292BE875EA00E15476 /* Build configuration list for PBXProject "ZeeHelper" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B1DE3252BE875EA00E15476;
+			productRefGroup = 1B1DE32F2BE875EA00E15476 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B1DE32D2BE875EA00E15476 /* ZeeHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B1DE32C2BE875EA00E15476 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4AA2552C004C8E0018D847 /* vertical_full_screen.mp4 in Resources */,
+				1B4FBF532C0B0C1D0072DF4B /* LaunchScreen.storyboard in Resources */,
+				1B1DE3392BE875EC00E15476 /* Preview Assets.xcassets in Resources */,
+				1B1DE3362BE875EC00E15476 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F5785A96FA2AE9EC6AE92D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZeeHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		606F25F88F76F21282F74810 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeeHelper/Pods-ZeeHelper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeeHelper/Pods-ZeeHelper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZeeHelper/Pods-ZeeHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B1DE32A2BE875EA00E15476 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B8842982BF2046A00F37EA7 /* Device.swift in Sources */,
+				1B6C68BD2BE8812E0089CC5B /* VideoCallView.swift in Sources */,
+				1B1DE3432BE878E000E15476 /* VideoView.swift in Sources */,
+				1B8496702BFC82B800E72CC3 /* PiPPlayerView.swift in Sources */,
+				1B1DE3342BE875EA00E15476 /* MainView.swift in Sources */,
+				1B3D811B2BECB6D800D3BF2A /* DeviceView.swift in Sources */,
+				1B8842952BF2012F00F37EA7 /* DatabaseManager.swift in Sources */,
+				1B1DE3322BE875EA00E15476 /* ZeeHelperApp.swift in Sources */,
+				1BA2D7252BEF71B100578EF0 /* QRCodeScannerView.swift in Sources */,
+				1B6C4A0C2C09E85800A596FE /* LocalNetworkPermission.swift in Sources */,
+				1B9B6E172BFF4C00004E95D0 /* PiPViewController.swift in Sources */,
+				1BA2D7212BEF648800578EF0 /* WebSocketClient.swift in Sources */,
+				1B0588862BEDC6E700CB5D0E /* SettingsView.swift in Sources */,
+				1BA2D7232BEF6A1600578EF0 /* Config.swift in Sources */,
+				1B6C68C02BE884BD0089CC5B /* VideoCallViewModel.swift in Sources */,
+				1BCF26652BF5AA1B004979A4 /* NetworkMonitor.swift in Sources */,
+				1B6C68C22BE8B9B40089CC5B /* WebRTCClient.swift in Sources */,
+				1BCF26672BF5F303004979A4 /* SignalServer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1B1DE33A2BE875EC00E15476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1B1DE33B2BE875EC00E15476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B1DE33D2BE875EC00E15476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB93BFEB62035804648A5614 /* Pods-ZeeHelper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZeeHelper/ZeeHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZeeHelper/Preview Content\"";
+				DEVELOPMENT_TEAM = 8X3TCPQQCT;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZeeHelper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "紫星助手";
+				INFOPLIST_KEY_NSCameraUsageDescription = "我们需要访问您的相机以拍摄照片。";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "需要访问本地网络以发现和连接设备。";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "我们需要访问您的麦克风以录制音频。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zee.ZeeHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B1DE33E2BE875EC00E15476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B2DA2376303D8E01217C783 /* Pods-ZeeHelper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZeeHelper/ZeeHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZeeHelper/Preview Content\"";
+				DEVELOPMENT_TEAM = 8X3TCPQQCT;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZeeHelper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "紫星助手";
+				INFOPLIST_KEY_NSCameraUsageDescription = "我们需要访问您的相机以拍摄照片。";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "需要访问本地网络以发现和连接设备。";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "我们需要访问您的麦克风以录制音频。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zee.ZeeHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B1DE3292BE875EA00E15476 /* Build configuration list for PBXProject "ZeeHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B1DE33A2BE875EC00E15476 /* Debug */,
+				1B1DE33B2BE875EC00E15476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B1DE33C2BE875EC00E15476 /* Build configuration list for PBXNativeTarget "ZeeHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B1DE33D2BE875EC00E15476 /* Debug */,
+				1B1DE33E2BE875EC00E15476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B1DE3262BE875EA00E15476 /* Project object */;
+}
